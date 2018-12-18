@@ -1,0 +1,403 @@
+section.resume-section {
+  padding: 0rem;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  max-width: 75rem;
+  background: black;
+
+  .resume-item {
+    .resume-content {}
+
+    .resume-date {
+      min-width: none;
+    }
+  }
+
+
+}
+.content-text{
+  .bold-text{
+    font-size: 8px;
+
+  }
+}
+
+.Hi {
+  font-size: 35px;
+}
+
+.about-me {
+  padding: 0 10em;
+}
+
+.links {
+
+  color: #29f3c3 !important;
+  font-size: 15px;
+}
+
+.button-outline {
+  border-radius: 5px;
+  background: transparent;
+  padding: 5px;
+
+  .content {
+    padding: 3px;
+    color: #29f3c3;
+  }
+}
+
+.button-outline:hover .content {
+  color: white
+}
+
+.content-text:hover {
+  text-decoration: none;
+}
+
+.exp {
+  .exp-header {
+    margin: -24px !important;
+    background: #262626 !important;
+    padding: 1.5rem;
+  }
+
+  .exp-footer {
+    margin: -24px !important;
+    background: #262626 !important;
+    padding: 1.5rem;
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  width: 75%;
+  padding: 1.5rem !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+  0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+ h3 {
+    padding-top: 5px;
+    font-size: 2.2rem;
+    color: white;
+  }
+
+  p {
+    padding-top: 10px;
+    font-size: 18px;
+    color: white;
+  }
+
+
+
+  .exp-content {
+    background: black;
+    margin: -24px !important;
+    padding: 1.5rem;
+  }
+}
+
+.link-site:hover{
+  color:white;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.5;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: relative;
+  background: transparent;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+
+}
+
+.profile-img {
+  img {
+    width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+  }
+
+  .About-me {
+    padding: 0px 7em;
+  }
+ 
+}
+.Name{
+  color:white;
+  font-weight: bold;
+  background: #262626;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+.progressBar{
+  height:33px;
+  margin-bottom: 20px;
+  background: #868e96;
+  padding:0px;
+  .progress-bar{
+    background: #29f3c3!important;
+  }
+  
+}
+.skill {
+  .bubble-header {
+    font-size: 1.5em !important;
+  }
+
+  .circle {
+    background-color: #262626;
+    border-radius: 50%;
+    height: 175px;
+    width: 175px;
+    color: white;
+    word-wrap: break-word;
+    margin: 10px auto;
+    padding: 45px;
+
+    i {
+      font-size: 75px;
+
+    }
+  }
+
+  .circle:hover {
+    background: #29f3c3;
+  }
+}
+
+.btn-outline-info {
+  color: white;
+  background-color: transparent;
+  background-image: none;
+  border-color: #29f3c3;
+}
+
+.btn-outline-info:hover {
+  background: #29f3c3;
+  border: 0px;
+}
+
+.projects {
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+
+  .image-project {
+    z-index: 2;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: white;
+    height: 180px;
+    padding: 66px 0;
+    position: absolute;
+    top: -120px;
+    border-radius: 10px;
+    left: 7%;
+    transition: top ease 0.5s;
+    width: 86%;
+
+    img {
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .proj-opt {
+    display: none;
+    color: #29f3c3;
+    margin: 15px;
+  }
+
+  .image-project:hover {
+    background: #737373;
+  }
+
+  .image-project:hover .proj-opt {
+    display: -webkit-box;
+  }
+
+  .project-title {
+    padding-top: 20px;
+  }
+
+
+  .project-text {
+    .proj-accomplishment {
+      font-size: 11px;
+    }
+
+    height: 225px;
+
+    .options {
+      color: #29f3c3;
+
+      i {
+        font-size: 10px;
+      }
+
+      font-size: 10px;
+    }
+   .bold-text{
+      font-size:11px;
+   }
+  
+    background: #262626;
+    border-radius: 10px;
+
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+    h4 {
+      color: white;
+    }
+    p.duration a {
+      color: white;
+  }
+    b {
+      font-size: 15px;
+    }
+
+    p {
+      font-size: 10px;
+      padding-top: 10px;
+    }
+
+    .technologies {
+      font-size: 25px;
+      position: absolute;
+      bottom: 15px;
+    }
+
+    ul {
+      padding: 0;
+      padding-top: 20px;
+      list-style: none;
+      margin: 0;
+    }
+
+    li {
+      padding-left: 1em;
+      text-indent: -0.7em;
+    }
+
+    li::before {
+      content: "• ";
+      color: #29f3c3;
+      /* or whatever color you prefer */
+    }
+  }
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+#contact{
+  .container-fluid{
+    padding:0px 20%;
+    .controls{
+      label{
+        color:white;
+        font-size: 18px;
+      }
+      .form-control{
+        background: #262626 !important;
+        border:none;
+        color:white;
+      }
+      .btn-contact-submit{
+          background: #262626;
+          color:#29f3c3;
+          border:2px solid #29f3c3;
+      }
+      .btn-contact-submit:hover{
+        background: #29f3c3;
+        color:#262626
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 100vh;
+
+    .resume-item {
+      .resume-date {
+        min-width: 18rem;
+      }
+    }
+  }
+}
+
+.projectBlock.second-line {
+  margin-top: 120px;
+}
+
+@media (max-width:768px) {
+  .image-project{
+    img{
+      max-width:200px;
+    }
+  }
+  .active.main-links{
+    color:#29f3c3;
+    text-decoration: none;
+  }
+  .active.main-links:hover{
+    color:white;
+    text-decoration: none;
+  }
+  .project-text{
+    height:280px !important;
+  }
+  .projectBlock {
+    margin-top: 120px;
+  }
+  .about-me{
+    padding: 0;
+  }
+  .exp{
+    width: 100%
+  }
+  #contact{
+    .container-fluid{
+      padding: 0
+    }
+  }
+
+  .projectBlock.first-proj {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  section.resume-section {
+    padding-top: 10rem !important;
+    padding-bottom: 10rem !important;
+  }
+}
