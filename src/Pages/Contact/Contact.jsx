@@ -8,9 +8,10 @@ class Contact extends Component {
         id="contact"
       >
         <div className="my-auto">
-          <h2 className="mb-5 Heading">GET IN TOUCH</h2>
+        <h2 id="contacth2" class="heading-padd"> </h2>
+          <h2 className="mb-5 Heading mt-3" >GET IN TOUCH</h2>
           <div className="container-fluid">
-            <form id="contact-form" method="post" action="contact.php">
+            <form id="contact-form" name="contact" method="post">
               <div className="messages" />
 
               <div className="controls">

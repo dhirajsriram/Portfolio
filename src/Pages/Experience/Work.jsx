@@ -44,10 +44,12 @@ class Work extends Component {
             </div>
             <div className="col-sm-6 col-6">
               <p className="float-right">
-                Technologies : <i className="fab fa-angular" />{" "}
-                <i className="fab fa-react" /> <i className="fab fa-node" />{" "}
-                <i className="fab fa-html5" /> <i className="fab fa-css3" />{" "}
-                <i className="fab fa-js-square" />{" "}
+                Technologies : 
+                {
+                  this.props.technologies && this.props.technologies.map(function(technology,i){
+                    return(<i className={technology +" technologies"} key={i}></i>)
+                  })
+                }
               </p>
             </div>
           </div>

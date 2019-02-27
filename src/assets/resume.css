@@ -64,6 +64,9 @@ p.lead {
   .social-icons a i.fab {
     margin: 16px; }
 
+.technologies {
+  padding: 3px; }
+
 .dev-icons {
   font-size: 3rem; }
   .dev-icons .list-inline-item i:hover {
@@ -133,6 +136,11 @@ section.resume-section {
   background: black; }
   section.resume-section .resume-item .resume-date {
     min-width: none; }
+  section.resume-section .jumbotron {
+    background: transparent; }
+
+.my-auto.projects-container {
+  height: 100px !important; }
 
 .content-text .bold-text {
   font-size: 8px; }
@@ -164,14 +172,14 @@ section.resume-section {
 .exp {
   width: 75%;
   padding: 1.5rem !important;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 black; }
   .exp .exp-header {
     margin: -24px !important;
     background: #262626 !important;
     padding: 1.5rem; }
   .exp .exp-footer {
     margin: -24px !important;
-    background: #262626 !important;
+    background: black !important;
     padding: 1.5rem; }
     .exp .exp-footer p {
       font-size: 16px; }
@@ -192,7 +200,7 @@ section.resume-section {
   color: white; }
 
 #myVideo {
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
@@ -260,32 +268,54 @@ section.resume-section {
   border: 0px; }
 
 .projects {
+  transition: background-color 0.5s ease;
   position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 black !important;
+  background-blend-mode: lighten;
   margin: 10px;
-  padding: 10px; }
+  padding: 10px;
+  border-radius: 10px;
+  background-size: cover; }
   .projects .image-project {
     z-index: 2;
     cursor: pointer;
     display: block;
     margin: auto;
-    background: white;
     height: 180px;
     padding: 66px 0;
-    position: absolute;
-    top: -120px;
-    border-radius: 10px;
     left: 7%;
-    transition: top ease 0.5s;
-    width: 86%; }
+    width: 100%; }
     .projects .image-project img {
       display: block;
-      margin: auto; }
+      margin: auto;
+      height: 50px; }
+  .projects .project-backside {
+    z-index: 2;
+    padding: 25px 0;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    height: 180px; }
+    .projects .project-backside .link-button {
+      border-radius: 25px;
+      width: 50%;
+      margin: auto;
+      border: 1.5px solid #43d8b5;
+      padding: 5px;
+      margin-top: 30px; }
+      .projects .project-backside .link-button a {
+        color: white;
+        text-decoration: none; }
+    .projects .project-backside .link-button:hover {
+      background-color: #43d8b5; }
   .projects .proj-opt {
     display: none;
     color: #29f3c3;
     margin: 15px; }
-  .projects .image-project:hover {
-    background: #737373; }
   .projects .image-project:hover .proj-opt {
     display: -webkit-box; }
   .projects .project-title {
@@ -331,6 +361,9 @@ section.resume-section {
       color: #29f3c3;
       /* or whatever color you prefer */ }
 
+.projects:hover {
+  background: #262626 !important; }
+
 /* Style the button used to pause/play the video */
 #myBtn {
   width: 200px;
@@ -362,14 +395,14 @@ section.resume-section {
     background: #29f3c3;
     color: #262626; }
 
+.heading-padd {
+  margin-bottom: 50px !important; }
+
 @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh; }
     section.resume-section .resume-item .resume-date {
       min-width: 18rem; } }
-
-.projectBlock.second-line {
-  margin-top: 120px; }
 
 @media (max-width: 768px) {
   .image-project img {
@@ -382,10 +415,8 @@ section.resume-section {
     text-decoration: none; }
   .project-text {
     height: 280px !important; }
-  .projectBlock {
-    margin-top: 120px; }
   .about-me {
-    padding: 0; }
+    padding: 0 !important; }
   .exp {
     width: 100%; }
   #contact .container-fluid {

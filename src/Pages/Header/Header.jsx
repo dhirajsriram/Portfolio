@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { withRouter } from 'react-router'
-
+import {ScrollContext} from '../../context/context'
 class Header extends Component {
   constructor() {
     super();
@@ -32,12 +32,14 @@ class Header extends Component {
   }
     render() {
         return (
+          <ScrollContext.Consumer>
+            {context=>(
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <div className="navbar-brand js-scroll-trigger">
         <span className="d-block d-lg-none Heading">Ds</span>
         <span className="d-none d-lg-block">
         <div className="logo">
-        <Link to="/About"> Ds</Link>
+        <Link to="/About" onClick={context.scrollPos.bind(this,'About')}> Ds</Link>
           </div>
         </span>
       </div>
@@ -48,26 +50,26 @@ class Header extends Component {
      
         <ul className="navbar-nav">
           <li className="nav-item">
-          <Link to="/About" className={this.props.location.pathname ==='/About'?'active main-links':'main-links'}><i className="fas fa-user"></i>{this.state.width < 768?" Home":null}</Link>
+          <Link to="/About" className={(this.props.scroll >=0 &&  this.props.scroll <=722)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'About')}><i className="fas fa-user"></i>{this.state.width < 768?" Home":null}</Link>
           </li>
           <li className="nav-item">
-          <Link to="/Me" className={this.props.location.pathname ==='/Me'?'active main-links':'main-links'}><i className="far fa-address-card"></i>{this.state.width < 768?" Me":null}</Link>
+          <Link to="/Me" className={(this.props.scroll > 723 &&  this.props.scroll <=1999)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Me')}><i className="far fa-address-card"></i>{this.state.width < 768?" Me":null}</Link>
           </li>
           <li className="nav-item">
-          <Link to="/Experience" className={this.props.location.pathname ==='/Experience'?'active main-links':'main-links'}><i className="fas fa-briefcase"></i>{this.state.width < 768?" Experience":null}</Link>
+          <Link to="/Experience" className={(this.props.scroll >= 2000 &&  this.props.scroll <=3019)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Experience')}><i className="fas fa-briefcase"></i>{this.state.width < 768?" Experience":null}</Link>
           </li>
           <li className="nav-item">
-          <Link to="/Projects" className={this.props.location.pathname ==='/Projects'?'active main-links':'main-links'}><i className="fas fa-file-code"></i>{this.state.width < 768?" Portfolio":null}</Link>
+          <Link to="/Projects" className={(this.props.scroll >=3020 &&  this.props.scroll <=3999)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Projects')}><i className="fas fa-file-code"></i>{this.state.width < 768?" Portfolio":null}</Link>
           </li>
           <li className="nav-item">
-          <Link to="/Awards" className={this.props.location.pathname ==='/Awards'?'active main-links':'main-links'}><i className="fas fa-trophy"></i>{this.state.width < 768?" Awards":null}</Link>
+          <Link to="/Awards" className={(this.props.scroll >=4000 &&  this.props.scroll <=4699)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Awards')}><i className="fas fa-trophy"></i>{this.state.width < 768?" Awards":null}</Link>
           </li>
           <li className="nav-item">
-          <Link to="/Contact" className={this.props.location.pathname ==='/Contact'?'active main-links':'main-links'}><i className="fas fa-phone"></i>{this.state.width < 768?" Contact":null}</Link>
+          <Link to="/Contact" className={(this.props.scroll >=4700)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Contact')}><i className="fas fa-phone"></i>{this.state.width < 768?" Contact":null}</Link>
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> )}</ScrollContext.Consumer>
         );
     }
 }

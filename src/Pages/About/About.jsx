@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import {ScrollContext} from '../../context/context'
 class About extends Component {
   componentDidMount() {
     var ml4 = {};
@@ -63,33 +64,37 @@ class About extends Component {
   }
   render() {
     return (
-      <div className="resume-section about p-3 d-flex d-column transition-item" id="about">
-        <video autoPlay muted loop id="myVideo">
-          <source src={require("../../assets/LineB&W.mp4")} />
-          Your browser does not support HTML5 video.
-        </video>
-        <div className="my-auto content">
-          <h1 className="Heading">
-            <span className="letters">Dhiraj Sriram</span>
-          </h1>
-          <div className="ml4 subheading text-white">
-            <span className="letters letters-1">UI Developer</span>
-            <span className="letters letters-2">Front end developer</span>
-          </div>
-          <br />
-          <br/>
-          <br/>
-          <br/>
-          <p className="lead mb-5 ext-truncat text-center">
-           UI Designer & Developer based in Dallas, Texas.<br/>Highly experienced in designing & developing User Interfaces in <i className="fab fa-angular"></i> & <i className="fab fa-react"></i>.
-          </p>
-        
-        </div>
-        <Link to="/Projects"><button type="button" className="portfolio links hvr-bounce-in">Portfolio <i className="fas fa-angle-double-right"></i></button></Link> 
-        <Link to="/Contact"><button type="button" className="contact links hvr-bounce-in">Contact me <br/><i className="fas fa-angle-double-down"></i></button></Link>
+<ScrollContext.Consumer>
+  {
+    context =>(<div className="resume-section about p-3 d-flex d-column transition-item" id="about">
+    <video autoPlay muted loop id="myVideo">
+      <source src={require("../../assets/LineB&W.mp4")} />
+      Your browser does not support HTML5 video.
+    </video>
+    <div className="my-auto content">
+      <h1 className="Heading">
+        <span className="letters">Dhiraj Sriram</span>
+      </h1>
+      <div className="ml4 subheading text-white">
+        <span className="letters letters-1">UI Developer</span>
+        <span className="letters letters-2">Front end developer</span>
       </div>
+      <br />
+      <br/>
+      <br/>
+      <br/>
+      <p className="lead mb-5 ext-truncat text-center">
+       UI Designer & Developer based in Dallas, Texas.<br/>Highly experienced in designing & developing User Interfaces in <i className="fab fa-angular"></i> & <i className="fab fa-react"></i>.
+      </p>
+    
+    </div>
+    <Link to="/Projects" onClick={context.scrollPos.bind(this,'Projects')} className={this.props.scroll && this.props.scroll !== 0?"fadeMe none":"fadeMe"}><button type="button" className="portfolio links hvr-bounce-in">Portfolio <i className="fas fa-angle-double-right"></i></button></Link> 
+    <Link to="/Contact" onClick={context.scrollPos.bind(this,'Contact')} className={this.props.scroll && this.props.scroll !== 0?"fadeMe none":"fadeMe"}><button type="button" className="contact links hvr-bounce-in">Contact me <br/><i className="fas fa-angle-double-down"></i></button></Link>
+  </div>)
+  }
+</ScrollContext.Consumer>
     );
   }
+  
 }
-
 export default About;

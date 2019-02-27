@@ -6,14 +6,15 @@ class Me extends Component {
     return (
       <div
         className="resume-section  p-3 d-flex flex-column transition-item"
-        id="experience"
+        id="me"
       >
-        <h1 className="subheading text-white text-center Hi">
+      <h2 id="meh2" class="heading-padd"> </h2>
+        <h1 className="subheading text-white text-center Hi" >
           Hi, Im Dhiraj. Nice to meet you
         </h1>
         <p className="about-me text-center">
-          "The passion for arts that I had in my childhood aligned perfectly
-          when I chose the path of a UI developer. The way that I have
+          "The passion for arts which I had in my childhood aligned perfectly
+          when I chose the path of an UI developer. The way that I have
           transilated my passion into work is clearly evident from the projects
           that I have done in the past. I have had the pleasure to have
           collaborated with some of the coolest companies which were kind enough
@@ -65,7 +66,7 @@ class Me extends Component {
               <img
                 className="img-responsive"
                 alt="dhiraj-logo"
-                src="https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/18700231_1523853040979325_4856863242513125567_n.jpg?_nc_cat=105&oh=0c5a800784421e01f24e5f7490186d0a&oe=5C1B6C50"
+                src={require("../../assets/18700231_1523853040979325_4856863242513125567_n.jpg")}
               />
               <br />
               <div className="who-is">
@@ -80,7 +81,7 @@ class Me extends Component {
           </div>
           <div className="col-sm-6 col-12 p-5">
           <ProgressBar percent={"90%"} name={"Angular"}/>
-          <ProgressBar percent={"70%"} name={"React"}/>
+          <ProgressBar percent={"90%"} name={"React"}/>
           <ProgressBar percent={"90%"} name={"HTML5"}/>
           <ProgressBar percent={"90%"} name={"CSS3"}/>
           <ProgressBar percent={"80%"} name={"JS/TS"}/>

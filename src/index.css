@@ -78,6 +78,25 @@ p.lead {
   position: absolute;
   top: 50%; }
 
+.fadeMe {
+  animation: fadeIn 0.5s linear; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.fadeMe.none {
+  opacity: 0;
+  animation: fadeOut 0.5s linear; }
+
 @media (max-width: 768px) {
   .portfolio {
     width: 70px; } }
@@ -101,7 +120,6 @@ p.lead {
 .contact {
   position: fixed;
   bottom: 0px;
-  position: fixed;
   left: 25%;
   height: 100px;
   width: 54%;
@@ -341,26 +359,29 @@ section.resume-section .resume-item .resume-date {
 
 @media (min-width: 992px) {
   div.resume-section {
-    min-height: 100vh; }
-  div.resume-section::before {
-    content: "";
-    background-image: url("assets/images.jpg");
-    opacity: 0.1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: fixed; } }
+    min-height: 100vh; } }
 
-div.resume-section::before {
+div.background-image.no-background::before {
+  opacity: 0;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out; }
+
+div.background-image::before {
   content: "";
   background-image: url("assets/images.jpg");
+  background-size: cover;
   opacity: 0.1;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  position: fixed; }
+  position: fixed;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out; }
 
 hr {
   margin-top: 1rem;
@@ -373,7 +394,8 @@ hr {
 
 div.resume-section.about {
   background: #3c3c3c;
-  min-height: 100vh; }
+  min-height: 100vh;
+  overflow-x: hidden; }
 
 div.resume-section.about::before {
   background-image: none; }
