@@ -76,7 +76,7 @@ class About extends Component {
         <span className="letters">Dhiraj Sriram</span>
       </h1>
       <div className="ml4 subheading text-white">
-        <span className="letters letters-1">UI Developer</span>
+        <span className="letters letters-1">UI/UX Developer</span>
         <span className="letters letters-2">Front end developer</span>
       </div>
       <br />
