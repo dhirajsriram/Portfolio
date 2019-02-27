@@ -17,6 +17,7 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
+    "build deploy":"npm install npm-run-all build-css build-js",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "deploy": "gh-pages -d build",
