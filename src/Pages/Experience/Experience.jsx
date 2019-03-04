@@ -9,7 +9,7 @@ class Experience extends Component {
         
       >
         <div className="my-auto">
-        <h2 id="experienceh2" class="heading-padd"> </h2>
+        <h2 id="experienceh2" className="heading-padd"> </h2>
           <h2 className="mb-5 Heading experience mt-3" >Experience</h2>
         </div>
         <Work

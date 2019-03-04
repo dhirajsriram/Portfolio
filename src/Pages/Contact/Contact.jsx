@@ -1,6 +1,27 @@
 import React, { Component } from "react";
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit(event) {
+    console.log(this.state)
+    var maiLink1 = "mailto:dhirajsriram3194@gmail.com?subject=" + this.state.subject +"- "+this.state.name +" " + this.state.surname +  " ( "+ this.state.Phone + " ) &body="+this.state.message;
+    var mailLink2 = "mailto:dhirajsriram3194@gmail.com?subject=" + this.state.subject +"- "+this.state.name +" " + this.state.surname +"&body="+this.state.message;
+    if(this.state.Phone){
+    window.location.href = maiLink1;
+  }
+  else{
+    window.location.href = mailLink2;
+  }
+    event.preventDefault();
+  }
+  handleChange(event) {
+    this.setState({[event.target.name]: event.target.value});
+  }
   render() {
     return (
       <div
@@ -8,10 +29,10 @@ class Contact extends Component {
         id="contact"
       >
         <div className="my-auto">
-        <h2 id="contacth2" class="heading-padd"> </h2>
+        <h2 id="contacth2" className="heading-padd"> </h2>
           <h2 className="mb-5 Heading mt-3" >GET IN TOUCH</h2>
           <div className="container-fluid">
-            <form id="contact-form" name="contact" method="post">
+            <form id="contact-form" name="contact" method="post" onSubmit={this.handleSubmit}>
               <div className="messages" />
 
               <div className="controls">
@@ -23,6 +44,7 @@ class Contact extends Component {
                         id="form_name"
                         type="text"
                         name="name"
+                        onChange={this.handleChange}
                         className="form-control"
                         placeholder="Please enter your firstname *"
                         required="required"
@@ -38,6 +60,7 @@ class Contact extends Component {
                         id="form_lastname"
                         type="text"
                         name="surname"
+                        onChange={this.handleChange}
                         className="form-control"
                         placeholder="Please enter your lastname *"
                         required="required"
@@ -55,6 +78,7 @@ class Contact extends Component {
                         id="form_email"
                         type="email"
                         name="email"
+                        onChange={this.handleChange}
                         className="form-control"
                         placeholder="Please enter your email *"
                         required="required"
@@ -65,27 +89,42 @@ class Contact extends Component {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label htmlFor="form_phone">Phone *</label>
+                      <label htmlFor="form_phone">Phone</label>
                       <input
                         id="form_Phone"
                         type="number"
                         name="Phone"
+                        onChange={this.handleChange}
                         className="form-control"
-                        placeholder="Please enter your Phone *"
-                        required="required"
-                        data-error="Valid Phone is required."
+                        placeholder="Please enter your Phone "
                       />
                       <div className="help-block with-errors" />
                     </div>
                   </div>
                 </div>
                 <div className="row">
+                <div className="col-md-12">
+                    <div className="form-group">
+                      <label htmlFor="form_subject">Subject *</label>
+                      <input
+                        id="form_subject"
+                        name="subject"
+                        onChange={this.handleChange}
+                        className="form-control"
+                        placeholder="Subject*"
+                        required="required"
+                        data-error="Please add a subject"
+                      />
+                      <div className="help-block with-errors" />
+                    </div>
+                  </div>
                   <div className="col-md-12">
                     <div className="form-group">
                       <label htmlFor="form_message">Message *</label>
                       <textarea
                         id="form_message"
                         name="message"
+                        onChange={this.handleChange}
                         className="form-control"
                         placeholder="Message for me *"
                         rows="4"
@@ -96,7 +135,7 @@ class Contact extends Component {
                     </div>
                   </div>
                   <div className="col-md-12">
-                    <input
+                  <input
                       type="submit"
                       className="btn btn-success btn-contact-submit"
                       value="Send message"

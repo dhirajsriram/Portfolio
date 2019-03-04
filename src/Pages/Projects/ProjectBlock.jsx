@@ -21,7 +21,7 @@ class ProjectBlock extends Component {
     render() {
          
         return (
-            <div className={this.props.className === 'second-line'?"col-sm-4 projectBlock second-line":this.props.className === 'first'?"col-sm-4 projectBlock first-proj":"col-sm-4 projectBlock"}>
+            <div className={this.props.className === 'second-line'?"col-md-12 col-12 col-sm-12 col-lg-12 col-xl-4 projectBlock second-line":this.props.className === 'first'?"col-md-12 col-12 col-sm-12 col-lg-12 col-xl-4 projectBlock first-proj":"col-md-12 col-12 col-sm-12 col-lg-12 col-xl-4 projectBlock"}>
             <div className="projects" style = {{ backgroundImage: 'url(' + this.props.background + ')'}} onMouseEnter={this.handleMouseHover}
           onMouseLeave={this.handleMouseHover}>
               {!this.state.hover ? <div className="image-project">

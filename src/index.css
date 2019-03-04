@@ -390,6 +390,10 @@ hr {
   width: 100px; }
 
 .main-links {
+  color: #868e96;
+  cursor: pointer; }
+
+.active.main-links {
   color: #29f3c3; }
 
 div.resume-section.about {

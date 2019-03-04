@@ -8,7 +8,7 @@ class Me extends Component {
         className="resume-section  p-3 d-flex flex-column transition-item"
         id="me"
       >
-      <h2 id="meh2" class="heading-padd"> </h2>
+      <h2 id="meh2" className="heading-padd"> </h2>
         <h1 className="subheading text-white text-center Hi" >
           Hi, Im Dhiraj. Nice to meet you
         </h1>

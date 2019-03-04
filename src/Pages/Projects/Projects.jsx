@@ -15,7 +15,7 @@ class Projects extends Component {
         
       >
         <div className="my-auto projects-container">
-        <h2 id="skillsh2" class="heading-padd"> </h2>
+        <h2 id="skillsh2" className="heading-padd"> </h2>
           <h2 className="m-5 Heading skills mt-3" >Projects</h2>
           <br />
           <br />
