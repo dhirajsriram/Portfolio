@@ -1,5 +1,5 @@
 # dhirajsriram.com
-** Technologies **
+**This is bold text**
 - React 16
 - React Router
 - React transistion
