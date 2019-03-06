@@ -4,11 +4,11 @@
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "npm-run-all": "^4.1.3",
-    "react": "^16.5.0",
     "homepage": "https://dhirajsriram.github.io/Portfolio",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.8.4",
     "react-addons-css-transition-group": "^15.6.2",
-    "react-dom": "^16.5.0",
+    "react-dom": "^16.8.4",
     "react-router-dom": "^4.3.1",
     "react-router-page-transition": "^3.1.0",
     "react-scripts": "1.1.5"
@@ -17,17 +17,17 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
-    "build deploy":"npm install npm-run-all build-css build-js",
+    "build deploy": "npm install npm-run-all build-css build-js",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "deploy": "gh-pages -d build",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "eject": "react-scripts eject",
     "build-css": "node-sass --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
   "devDependencies": {
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0"
   }
 }
