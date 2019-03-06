@@ -1,5 +1,5 @@
 # dhirajsriram.com
-## Technologies
+** Technologies
 - React 16
 - React Router
 - React transistion
