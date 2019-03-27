@@ -12,7 +12,7 @@ class Contact extends Component {
     var maiLink1 = "mailto:dhirajsriram3194@gmail.com?subject=" + this.state.subject +"- "+this.state.name +" " + this.state.surname +  " ( "+ this.state.Phone + " ) &body="+this.state.message;
     var mailLink2 = "mailto:dhirajsriram3194@gmail.com?subject=" + this.state.subject +"- "+this.state.name +" " + this.state.surname +"&body="+this.state.message;
     if(this.state.Phone){
-    window.location.href = maiLink9884010195d1;
+    window.location.href = maiLink1;
   }
   else{
     window.location.href = mailLink2;

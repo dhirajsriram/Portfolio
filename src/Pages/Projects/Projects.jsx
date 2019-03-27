@@ -11,22 +11,22 @@ class Projects extends Component {
   render() {
     return (
       <div
-        className="resume-section  p-3 d-flex flex-column transition-item"
+        class="resume-section  p-3 d-flex flex-column transition-item"
         
       >
-        <div className="my-auto projects-container">
-        <h2 id="skillsh2" className="heading-padd"> </h2>
-          <h2 className="m-5 Heading skills mt-3" >Projects</h2>
+        <div class="my-auto projects-container">
+        <h2 id="skillsh2" class="heading-padd"> </h2>
+          <h2 class="m-5 Heading skills mt-3" >Projects</h2>
           <br />
           <br />
           <br />
           <br />
           <br />
         </div>
-        <div className="row mt-5 ">
+        <div class="row mt-5 ">
           <ProjectBlock
             name={"Brandsmart"}
-            className={"first"}
+            class={"first"}
             image={require("../../assets/bm_logo.png")}
             siteurl={"https://www.brandsmartusa.com"}
             background={require("../../assets/electronics.jpg")}
@@ -69,15 +69,32 @@ class Projects extends Component {
           />
         </div>
         <br/>
-        <h3 className="text-center Heading mx-auto">Some personal stuff</h3>
-        <div className="row mt-5">
+        <h3 class="text-center Heading mx-auto">Some personal stuff</h3>
+        <div class="row mt-5">
+        <ProjectBlock 
+            name={"Pixelate-js"}
+            image={"https://d2vqpl3tx84ay5.cloudfront.net/500x/tumblr_lsus01g1ik1qies3uo1_400.png"}
+            siteurl={"https://www.npmjs.com/package/pixelate-js"}
+            technologies={["js-square", "node"]}
+            class={"second-line"}
+            background={require("../../assets/pixelateJs.png")}
+            description={"A customizable wallpaper generator for JS enthusiasts 💗"}
+          />
+          <ProjectBlock 
+            name={"npm-tabs"}
+            image={"https://raw.githubusercontent.com/samueleaton/design/master/npm-scripts-black.png"}
+            siteurl={"https://github.com/dhirajsriram/Npm-tabs"}
+            technologies={["terminal"]}
+            class={"second-line"}
+            background={"https://images.reference.com/reference-production-images/question/aq/tab-key_b59603b8e66566ed.jpg?width=760&height=411&fit=crop"}
+            description={"A bash script that provides autocomplete functionality to your command-line for npm scripts"}
+          />
         <ProjectBlock 
             name={"Pokedex"}
             image={"https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67"}
             siteurl={"https://github.com/dhirajsriram/Pokedex-React"}
-            content={["A pokedex is a tool which gives all the information such as bio, attributes and also the evolution chain of a pokemon.","Used <span className='bold-text'>Pokéapi v2</span> ,which is a RESTful api to fetch the Pokemon's information","Used <span className='bold-text'>react router for routing and axios</span> to make HTTP calls","Have also developed a similar application in Angular. The motivation was to observe the way the two framework differentiate each other. (<span className='bold-text'>code formatting, partial rendering and two-way binding</span>)"]}
             technologies={["js-square", "react","node", "html5", "css3"]}
-            className={"second-line"}
+            class={"second-line"}
             background={require("../../assets/pokemon.jpg")}
             description={"An application that delivers the catalogued information regarding the various species of Pokémon"}
           />

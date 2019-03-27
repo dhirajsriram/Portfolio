@@ -61,7 +61,7 @@ class Me extends Component {
         </div>
 
         <div className="row mt-5">
-          <div className="col-sm-6 text-center col-12">
+          <div className="col-sm-12 col-lg-6 text-center col-12">
             <div className="mt-5 profile-img">
               <img
                 className="img-responsive"
@@ -74,12 +74,12 @@ class Me extends Component {
                   Who is Dhiraj?
                 </h3>
                 <p className="About-me">
-                    I work as a UI developer for <a className="bold-text" href="http://taistech.com/"> TAIStech, LLC</a> in Dallas,TX. I am a guy that has a serious passion for designing user-friendly, efficient, reliable and intutive User-Interfaces. 
+                    I work as a UI developer for <a className="bold-text" href="http://taistech.com/"> TAISTech, LLC</a> in Dallas,TX. I am a guy that has a serious passion for designing user-friendly, efficient, reliable and intutive User-Interfaces. 
                 </p>
               </div>
             </div>
           </div>
-          <div className="col-sm-6 col-12 p-5">
+          <div className="col-sm-12 col-lg-6 col-12 p-5">
           <ProgressBar percent={"90%"} name={"Angular"}/>
           <ProgressBar percent={"90%"} name={"React"}/>
           <ProgressBar percent={"90%"} name={"HTML5"}/>
