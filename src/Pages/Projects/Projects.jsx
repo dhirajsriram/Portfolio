@@ -11,19 +11,19 @@ class Projects extends Component {
   render() {
     return (
       <div
-        class="resume-section  p-3 d-flex flex-column transition-item"
+        className="resume-section  p-3 d-flex flex-column transition-item"
         
       >
-        <div class="my-auto projects-container">
-        <h2 id="skillsh2" class="heading-padd"> </h2>
-          <h2 class="m-5 Heading skills mt-3" >Projects</h2>
+        <div className="my-auto projects-container">
+        <h2 id="skillsh2" className="heading-padd"> </h2>
+          <h2 className="m-5 Heading skills mt-3" >Projects</h2>
           <br />
           <br />
           <br />
           <br />
           <br />
         </div>
-        <div class="row mt-5 ">
+        <div className="row mt-5 ">
           <ProjectBlock
             name={"Brandsmart"}
             class={"first"}
@@ -69,8 +69,8 @@ class Projects extends Component {
           />
         </div>
         <br/>
-        <h3 class="text-center Heading mx-auto">Some personal stuff</h3>
-        <div class="row mt-5">
+        <h3 className="text-center Heading mx-auto">Some personal stuff</h3>
+        <div className="row mt-5">
         <ProjectBlock 
             name={"Pixelate-js"}
             image={"https://d2vqpl3tx84ay5.cloudfront.net/500x/tumblr_lsus01g1ik1qies3uo1_400.png"}
