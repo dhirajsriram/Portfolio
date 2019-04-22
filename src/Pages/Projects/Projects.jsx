@@ -62,7 +62,7 @@ class Projects extends Component {
           />
           <ProjectBlock 
             name={"Lachlist"}
-            image={"http://www.lachlist.com/wp-content/uploads/2016/12/New-LachList-Logo-2-1600x384.png"}
+            image={require("../../assets/lachlist.png")}
             siteurl={"http://lachlist.com"}
             background={require("../../assets/construction.jpg")}
             description={"An application that helps the construction contactors to learn more about the contractee"}
@@ -72,13 +72,13 @@ class Projects extends Component {
         <h3 className="text-center Heading mx-auto">Some personal stuff</h3>
         <div className="row mt-5">
         <ProjectBlock 
-            name={"Pixelate-js"}
-            image={"https://d2vqpl3tx84ay5.cloudfront.net/500x/tumblr_lsus01g1ik1qies3uo1_400.png"}
-            siteurl={"https://www.npmjs.com/package/pixelate-js"}
-            technologies={["js-square", "node"]}
+            name={"react-accessible-searchbar"}
+            image={"http://www.pngmart.com/files/5/Snow-PNG-Transparent-Image.png"}
+            siteurl={"https://www.npmjs.com/package/react-accessible-searchbar"}
+            technologies={["react"]}
             class={"second-line"}
-            background={require("../../assets/pixelateJs.png")}
-            description={"A customizable wallpaper generator for JS enthusiasts 💗"}
+            background={"https://callstack.github.io/react-native-paper/screenshots/searchbar.png"}
+            description={"A prebuilt react searchbar with Accessibility ,Autosuggest and Callbacks for search submission and value change"}
           />
           <ProjectBlock 
             name={"npm-tabs"}

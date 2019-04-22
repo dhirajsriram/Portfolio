@@ -110,7 +110,9 @@ p.lead {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s; }
 
-.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+.hvr-bounce-in:hover,
+.hvr-bounce-in:focus,
+.hvr-bounce-in:active {
   cursor: pointer;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
@@ -120,6 +122,15 @@ p.lead {
 .contact {
   position: fixed;
   bottom: 0px;
+  left: 25%;
+  height: 100px;
+  width: 54%;
+  background: transparent;
+  border: 0px; }
+
+.creative {
+  position: fixed;
+  top: 0px;
   left: 25%;
   height: 100px;
   width: 54%;
@@ -271,13 +282,13 @@ a.bold-text {
   margin-right: 0; }
 
 .social-icons a:hover {
-  background-color: #BD5D38; }
+  background-color: #bd5d38; }
 
 .dev-icons {
   font-size: 3rem; }
 
 .dev-icons .list-inline-item i:hover {
-  color: #BD5D38; }
+  color: #bd5d38; }
 
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
@@ -325,7 +336,7 @@ a.bold-text {
     margin-bottom: auto; }
   .bold-text {
     color: white !important;
-    font-weight: bold  !important; }
+    font-weight: bold !important; }
   #sideNav .navbar-collapse .navbar-nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -405,13 +416,15 @@ div.resume-section.about::before {
   background-image: none; }
 
 .bg-primary {
-  background-color: #BD5D38 !important; }
+  background-color: #bd5d38 !important; }
 
 .text-primary {
   color: #29f3c3 !important; }
 
 a {
-  color: #BD5D38; }
+  color: #bd5d38; }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   color: #824027; }
