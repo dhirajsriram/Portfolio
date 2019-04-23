@@ -13,15 +13,7 @@ class Me extends Component {
           Hi, Im Dhiraj. Nice to meet you
         </h1>
         <p className="about-me text-center">
-          "The passion for arts which I had in my childhood aligned perfectly
-          when I chose the path of an UI developer. The way that I have
-          transilated my passion into work is clearly evident from the projects
-          that I have done in the past. I have had the pleasure to have
-          collaborated with some of the coolest companies which were kind enough
-          to encourage my ideas and help me turn it into real life applications.
-          What would be the next pit stop in my life of neverending experiences
-          and growth, I wonder!!"
-        </p>
+          I <span role="img" aria-label="heart">💗</span> to design and develop solutions that empowers Usability, Accessibility, Performance, Search engine optimization and responsiveness.</p>
         <h1 className="subheading text-white text-center Hi">
           What I'm responsible for
         </h1>
