@@ -301,6 +301,17 @@ a.bold-text {
 #sideNav .navbar-toggler:focus {
   outline-color: #d48a6e; }
 
+@media (max-width: 768px) {
+  .navbar-brand {
+    padding: 3px;
+    border: 2px solid #29f3c3; }
+  .navbar-collapse {
+    margin-top: 13px; }
+  .nav-item {
+    padding: 5px 0px; }
+  .main-links i {
+    margin-right: 5px; } }
+
 @media (min-width: 992px) {
   #sideNav {
     text-align: center;
@@ -408,6 +419,9 @@ hr {
   cursor: pointer; }
 
 .active.main-links {
+  color: #29f3c3; }
+
+span.main-links:active {
   color: #29f3c3; }
 
 div.resume-section.about {
