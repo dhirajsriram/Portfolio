@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import {ScrollContext} from '../../context/context'
 class About extends Component {
   componentDidMount() {
@@ -88,8 +87,8 @@ class About extends Component {
       </p>
     
     </div>
-    <Link to="/Projects" onClick={context.scrollPos.bind(this,'Projects')} className={this.props.scroll && this.props.scroll !== 0?"fadeMe none":"fadeMe"}><button type="button" className="portfolio links hvr-bounce-in">Portfolio <i className="fas fa-angle-double-right"></i></button></Link> 
-    <Link to="/Contact" onClick={context.scrollPos.bind(this,'Contact')} className={this.props.scroll && this.props.scroll !== 0?"fadeMe none":"fadeMe"}><button type="button" className="contact links hvr-bounce-in">Contact me <br/><i className="fas fa-angle-double-down"></i></button></Link>
+    <a onClick={context.scrollPos.bind(this,'Projects')} className={this.props.scroll && this.props.scroll !== 0?"fadeMe none":"fadeMe"}><button type="button" className="portfolio links hvr-bounce-in">Portfolio <i className="fas fa-angle-double-right"></i></button></a> 
+    <a onClick={context.scrollPos.bind(this,'Contact')} className={this.props.scroll && this.props.scroll !== 0?"fadeMe none":"fadeMe"}><button type="button" className="contact links hvr-bounce-in">Contact me <br/><i className="fas fa-angle-double-down"></i></button></a>
   </div>)
   }
 </ScrollContext.Consumer>

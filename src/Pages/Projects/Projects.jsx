@@ -77,7 +77,7 @@ class Projects extends Component {
             siteurl={"https://www.npmjs.com/package/react-accessible-searchbar"}
             technologies={["react"]}
             class={"second-line"}
-            background={"https://callstack.github.io/react-native-paper/screenshots/searchbar.png"}
+            background={"https://i2.wp.com/www.sodawebmedia.com/wp-content/uploads/2016/10/search-box.png?fit=690%2C300&ssl=1"}
             description={"A prebuilt react searchbar with Accessibility ,Autosuggest and Callbacks for search submission and value change"}
           />
           <ProjectBlock 
@@ -92,10 +92,10 @@ class Projects extends Component {
         <ProjectBlock 
             name={"Pokedex"}
             image={"https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67"}
-            siteurl={"https://github.com/dhirajsriram/Pokedex-React"}
+            siteurl={"http://healthdex.netlify.com"}
             technologies={["js-square", "react","node", "html5", "css3"]}
             class={"second-line"}
-            background={require("../../assets/pokemon.jpg")}
+            background={"http://www.accomodations.asia/bigimg/small/11/117597_pokeball-wallpaper.jpg"}
             description={"An application that delivers the catalogued information regarding the various species of Pokémon"}
           />
         </div>

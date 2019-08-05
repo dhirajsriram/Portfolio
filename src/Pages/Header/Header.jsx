@@ -50,22 +50,22 @@ class Header extends Component {
      
         <ul className="navbar-nav">
           <li className="nav-item">
-          <span className={(this.props.scroll >=0 &&  this.props.scroll <=722)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'About')}><i className="fas fa-user"></i>{this.state.width < 768?" Home":null}</span>
+          <span className={(this.props.scroll >=0 &&  this.props.scroll <=722 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'About')}><i className="fas fa-user"></i>{this.state.width < 768?" Home":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll > 723 &&  this.props.scroll <=1999)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Me')}><i className="far fa-address-card"></i>{this.state.width < 768?" Me":null}</span>
+          <span className={(this.props.scroll > 723 &&  this.props.scroll <=1999 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Me')}><i className="far fa-address-card"></i>{this.state.width < 768?" Me":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >= 2000 &&  this.props.scroll <=3019)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Experience')}><i className="fas fa-briefcase"></i>{this.state.width < 768?" Experience":null}</span>
+          <span className={(this.props.scroll >= 2000 &&  this.props.scroll <=3019 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Experience')}><i className="fas fa-briefcase"></i>{this.state.width < 768?" Experience":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >=3020 &&  this.props.scroll <=3999)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Projects')}><i className="fas fa-file-code"></i>{this.state.width < 768?" Portfolio":null}</span>
+          <span className={(this.props.scroll >=3020 &&  this.props.scroll <=3999 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Projects')}><i className="fas fa-file-code"></i>{this.state.width < 768?" Portfolio":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >=4000 &&  this.props.scroll <=4699)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Awards')}><i className="fas fa-trophy"></i>{this.state.width < 768?" Awards":null}</span>
+          <span className={(this.props.scroll >=4000 &&  this.props.scroll <=4699 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Awards')}><i className="fas fa-trophy"></i>{this.state.width < 768?" Awards":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >=4700)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Contact')}><i className="fas fa-phone"></i>{this.state.width < 768?" Contact":null}</span>
+          <span className={(this.props.scroll >=4700 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Contact')}><i className="fas fa-phone"></i>{this.state.width < 768?" Contact":null}</span>
           </li>
         </ul>
       </div>

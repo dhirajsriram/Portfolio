@@ -17,7 +17,7 @@ class Work extends Component {
       <div className="jumbotron exp mx-auto">
         <div className="exp-header">
           <div className="row">
-            <div className="col-sm-3 col-12">
+            <div className="col-6">
               <img
                 ref="image"
                 alt={this.props.name}
@@ -25,10 +25,7 @@ class Work extends Component {
                 height="50"
               />
             </div>
-            <div className="col-sm-6 col-6">
-              <h3>{this.props.name}</h3>
-            </div>
-            <div className="col-sm-3 col-6 float-right">
+            <div className="col-6 float-right">
               <p className="float-right">{this.props.devrole}</p>
             </div>
           </div>

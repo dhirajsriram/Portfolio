@@ -45,7 +45,6 @@ class App extends Component {
     var element = "";
     switch(type)
     { 
-      
       case "About":
       element = document.getElementById("about");
       window.scrollTo({

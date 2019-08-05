@@ -39,7 +39,7 @@ class Contact extends Component {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label htmlFor="form_name">Firstname *</label>
+                      <label htmlFor="form_name">First Name *</label>
                       <input
                         id="form_name"
                         type="text"
@@ -55,7 +55,7 @@ class Contact extends Component {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label htmlFor="form_lastname">Lastname *</label>
+                      <label htmlFor="form_lastname">Last Name *</label>
                       <input
                         id="form_lastname"
                         type="text"

@@ -3,6 +3,9 @@
  * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
+body {
+  font-size: 1.1rem; }
+
 ::-webkit-scrollbar {
   width: 10px;
   background: #262626; }
