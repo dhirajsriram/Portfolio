@@ -28,7 +28,7 @@ class ProjectBlock extends Component {
                 <img
                   src={this.props.name!=="SOLR XM"?this.props.image:require("../../assets/Solr.png")}
                   alt="Bm-logo"
-                  height="40"
+                  height={this.props.name !=="React docs - Tamil"?40:60}
                   className="img-responsive"
                 />
               </div>:<div className="project-backside">

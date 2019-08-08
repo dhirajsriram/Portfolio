@@ -92,11 +92,24 @@ class Projects extends Component {
         <ProjectBlock 
             name={"Pokedex"}
             image={"https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67"}
-            siteurl={"http://healthdex.netlify.com"}
+            siteurl={"https://pokedex-info.netlify.com/"}
             technologies={["js-square", "react","node", "html5", "css3"]}
             class={"second-line"}
             background={"http://www.accomodations.asia/bigimg/small/11/117597_pokeball-wallpaper.jpg"}
             description={"An application that delivers the catalogued information regarding the various species of Pokémon"}
+          />
+        </div>
+        <br/>
+        <h3 className="text-center Heading mx-auto">In Progress ...</h3>
+        <div className="row mt-5">
+        <ProjectBlock 
+            name={"React docs - Tamil"}
+            image={"https://cdn4.iconfinder.com/data/icons/logos-3/426/react_js-512.png"}
+            siteurl={"https://github.com/reactjs/ta.reactjs.org/"}
+            technologies={["react","node", "html5", "css3" ]}
+            class={"second-line"}
+            background={"https://cdn.britannica.com/25/146925-004-784D6F30.jpg"}
+            description={"Translation of React docs in Tamil. Working on List and keys segment of the website"}
           />
         </div>
       </div>
