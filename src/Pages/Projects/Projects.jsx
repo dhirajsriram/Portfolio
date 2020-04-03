@@ -24,9 +24,16 @@ class Projects extends Component {
           <br />
         </div>
         <div className="row mt-5 ">
+        <ProjectBlock
+            name={"Saucelabs"}
+            class={"first"}
+            image={require("../../assets/logo-saucelabs.png")}
+            siteurl={"https://www.app.saucelabs.com"}
+            background={require("../../assets/white-bg.png")}
+            description={"Automated Testing Cloud"}
+          />  
           <ProjectBlock
             name={"Brandsmart"}
-            class={"first"}
             image={require("../../assets/bm_logo.png")}
             siteurl={"https://www.brandsmartusa.com"}
             background={require("../../assets/electronics.jpg")}
@@ -47,7 +54,7 @@ class Projects extends Component {
           />
           <ProjectBlock 
             name={"TWG Companies"}
-            image={require("../../assets/logo-pickBoxx.svg")}
+            image={require("../../assets/logo-pickboxx.png")}
             siteurl={"http://twgcompanies.com"}
             background={require("../../assets/business.jpg")}
             description={"A business support firm that offers services like Social Media marketing, Business loans etc"}
@@ -58,14 +65,6 @@ class Projects extends Component {
             siteurl={"http://twghomeremodeling.com"}
             background={require("../../assets/remodeling.jpg")}
             description={"A home remodeling firm which provides services like Powerwashing, Gutter Cleaning etc"}
-            
-          />
-          <ProjectBlock 
-            name={"Lachlist"}
-            image={require("../../assets/lachlist.png")}
-            siteurl={"http://lachlist.com"}
-            background={require("../../assets/construction.jpg")}
-            description={"An application that helps the construction contactors to learn more about the contractee"}
           />
         </div>
         <br/>
