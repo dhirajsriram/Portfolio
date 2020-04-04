@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { span } from "react-router-dom";
 import { withRouter } from 'react-router'
-import {ScrollContext} from '../../context/context'
+import { ScrollContext } from '../../context/context'
 class Header extends Component {
   constructor() {
     super();
@@ -59,13 +59,13 @@ class Header extends Component {
           <span className={(this.props.scroll >= 2000 &&  this.props.scroll <=3019 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Experience')}><i className="fas fa-briefcase"></i>{this.state.width < 768?" Experience":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >=3020 &&  this.props.scroll <=3999 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Projects')}><i className="fas fa-file-code"></i>{this.state.width < 768?" Portfolio":null}</span>
+          <span className={(this.props.scroll >=3020 &&  this.props.scroll <=5038 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Projects')}><i className="fas fa-file-code"></i>{this.state.width < 768?" Portfolio":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >=4000 &&  this.props.scroll <=4900 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Awards')}><i className="fas fa-trophy"></i>{this.state.width < 768?" Awards":null}</span>
+          <span className={(this.props.scroll >=5039 &&  this.props.scroll <=5439 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Awards')}><i className="fas fa-trophy"></i>{this.state.width < 768?" Awards":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >=4901 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Contact')}><i className="fas fa-phone"></i>{this.state.width < 768?" Contact":null}</span>
+          <span className={(this.props.scroll >=5440 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Contact')}><i className="fas fa-phone"></i>{this.state.width < 768?" Contact":null}</span>
           </li>
         </ul>
       </div>
