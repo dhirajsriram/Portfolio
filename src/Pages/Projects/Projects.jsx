@@ -30,7 +30,7 @@ class Projects extends Component {
             image={require("../../assets/logo-saucelabs.png")}
             siteurl={"https://www.app.saucelabs.com"}
             background={require("../../assets/white-bg.png")}
-            description={"Automated Testing Cloud"}
+            description={"Live, automated and continuous testing for web & mobile apps on the world's largest cloud-based test platform"}
           />  
           <ProjectBlock
             name={"Brandsmart"}
