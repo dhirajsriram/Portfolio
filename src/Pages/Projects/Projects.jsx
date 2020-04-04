@@ -28,7 +28,7 @@ class Projects extends Component {
             name={"Saucelabs"}
             class={"first"}
             image={require("../../assets/logo-saucelabs.png")}
-            siteurl={"https://www.app.saucelabs.com"}
+            siteurl={"https://www.saucelabs.com"}
             background={require("../../assets/white-bg.png")}
             description={"Live, automated and continuous testing for web & mobile apps on the world's largest cloud-based test platform"}
           />  
@@ -82,7 +82,7 @@ class Projects extends Component {
           <ProjectBlock 
             name={"npm-tabs"}
             image={"https://raw.githubusercontent.com/samueleaton/design/master/npm-scripts-black.png"}
-            siteurl={"https://github.com/dhirajsriram/Npm-tabs"}
+            siteurl={"https://www.npmjs.com/package/npm-tabs"}
             technologies={["terminal"]}
             class={"second-line"}
             background={"https://images.reference.com/reference-production-images/question/aq/tab-key_b59603b8e66566ed.jpg?width=760&height=411&fit=crop"}
