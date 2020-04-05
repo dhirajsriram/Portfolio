@@ -59,10 +59,10 @@ class Header extends Component {
           <span className={(this.props.scroll >= 2000 &&  this.props.scroll <=3019 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Experience')}><i className="fas fa-briefcase"></i>{this.state.width < 768?" Experience":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >=3020 &&  this.props.scroll <=5038 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Projects')}><i className="fas fa-file-code"></i>{this.state.width < 768?" Portfolio":null}</span>
+          <span className={(this.props.scroll >=3020 &&  this.props.scroll <=4970 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Projects')}><i className="fas fa-file-code"></i>{this.state.width < 768?" Portfolio":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >=5039 &&  this.props.scroll <=5439 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Awards')}><i className="fas fa-trophy"></i>{this.state.width < 768?" Awards":null}</span>
+          <span className={(this.props.scroll >=4971 &&  this.props.scroll <=5439 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Awards')}><i className="fas fa-trophy"></i>{this.state.width < 768?" Awards":null}</span>
           </li>
           <li className="nav-item">
           <span className={(this.props.scroll >=5440 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Contact')}><i className="fas fa-phone"></i>{this.state.width < 768?" Contact":null}</span>
