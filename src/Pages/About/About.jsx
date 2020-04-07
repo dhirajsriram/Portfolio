@@ -83,7 +83,7 @@ class About extends Component {
       <br/>
       <br/>
       <p className="lead mb-5 ext-truncat text-center">
-       UI Developer based in New York, New York.<br/>Highly experienced in developing and implementing User Interfaces in <i className="fab fa-angular"></i> & <i className="fab fa-react"></i>.
+       UI Developer based in Berlin, DE.<br/>Highly experienced in developing and implementing User Interfaces in <i className="fab fa-angular"></i> & <i className="fab fa-react"></i>.
       </p>
     
     </div>
