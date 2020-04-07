@@ -72,7 +72,7 @@ class Projects extends Component {
         <div className="row mt-5">
         <ProjectBlock 
             name={"react-accessible-searchbar"}
-            image={"http://www.pngmart.com/files/5/Snow-PNG-Transparent-Image.png"}
+            image={require("../../assets/Snow-PNG-Transparent-Image.png")}
             siteurl={"https://www.npmjs.com/package/react-accessible-searchbar"}
             technologies={["react"]}
             class={"second-line"}
@@ -94,7 +94,7 @@ class Projects extends Component {
             siteurl={"https://pokedex-info.netlify.com/"}
             technologies={["js-square", "react","node", "html5", "css3"]}
             class={"second-line"}
-            background={"http://www.accomodations.asia/bigimg/small/11/117597_pokeball-wallpaper.jpg"}
+            background={require("../../assets/117597_pokeball-wallpaper.jpg") }
             description={"An application that delivers the catalogued information regarding the various species of Pokémon"}
           />
         </div>
