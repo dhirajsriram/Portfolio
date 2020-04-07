@@ -66,7 +66,7 @@ class Me extends Component {
                   Who is Dhiraj?
                 </h3>
                 <p className="About-me">
-                    I work as a UI developer for <a className="bold-text" href="http://taistech.com/"> TAISTech, LLC</a> in Dallas,TX. I am a guy that has a serious passion for designing user-friendly, efficient, reliable and intutive User-Interfaces. 
+                    I work as a UI developer for <a className="bold-text" href="http://saucelabs.com/"> Saucelabs, GmbH</a> in Berlin, DE. I am a guy that has a serious passion for designing user-friendly, efficient, reliable and intutive User-Interfaces. 
                 </p>
               </div>
             </div>
