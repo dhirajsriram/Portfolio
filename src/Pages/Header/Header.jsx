@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { span } from "react-router-dom";
-import { withRouter } from 'react-router'
+import { withRouter } from 'react-router';
 import { ScrollContext } from '../../context/context'
 class Header extends Component {
   constructor() {
@@ -11,6 +10,7 @@ class Header extends Component {
     }
   }
   updateDimensions() {
+    if(window){
     if(window.innerWidth < 500) {
       this.setState({ width: 450, height: 102 });
     } else {
@@ -18,6 +18,7 @@ class Header extends Component {
       let update_height = Math.round(update_width/4.4);
       this.setState({ width: update_width, height: update_height });
     }
+  }
   }
   componentDidMount() {
     this.updateDimensions();
@@ -50,22 +51,22 @@ class Header extends Component {
      
         <ul className="navbar-nav">
           <li className="nav-item">
-          <span className={(this.props.scroll >=0 &&  this.props.scroll <=722 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'About')}><i className="fas fa-user"></i>{this.state.width < 768?" Home":null}</span>
+          <span className={(this.props.scroll >=0 &&  this.props.scroll <=722 && typeof(window) !== 'undefined' && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'About')}><i className="fas fa-user"></i>{this.state.width < 768?" Home":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll > 723 &&  this.props.scroll <=1999 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Me')}><i className="far fa-address-card"></i>{this.state.width < 768?" Me":null}</span>
+          <span className={(this.props.scroll > 723 &&  this.props.scroll <=1999 && typeof(window) !== 'undefined' && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Me')}><i className="far fa-address-card"></i>{this.state.width < 768?" Me":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >= 2000 &&  this.props.scroll <=3019 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Experience')}><i className="fas fa-briefcase"></i>{this.state.width < 768?" Experience":null}</span>
+          <span className={(this.props.scroll >= 2000 &&  this.props.scroll <=3019 && typeof(window) !== 'undefined' && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Experience')}><i className="fas fa-briefcase"></i>{this.state.width < 768?" Experience":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >=3020 &&  this.props.scroll <=4970 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Projects')}><i className="fas fa-file-code"></i>{this.state.width < 768?" Portfolio":null}</span>
+          <span className={(this.props.scroll >=3020 &&  this.props.scroll <=4970 && typeof(window) !== 'undefined' && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Projects')}><i className="fas fa-file-code"></i>{this.state.width < 768?" Portfolio":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >=4971 &&  this.props.scroll <=5439 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Awards')}><i className="fas fa-trophy"></i>{this.state.width < 768?" Awards":null}</span>
+          <span className={(this.props.scroll >=4971 &&  this.props.scroll <=5439 && typeof(window) !== 'undefined' && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Awards')}><i className="fas fa-trophy"></i>{this.state.width < 768?" Awards":null}</span>
           </li>
           <li className="nav-item">
-          <span className={(this.props.scroll >=5440 && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Contact')}><i className="fas fa-phone"></i>{this.state.width < 768?" Contact":null}</span>
+          <span className={(this.props.scroll >=5440 && typeof(window) !== 'undefined' && window.innerWidth >480)?'active main-links':'main-links'} onClick={context.scrollPos.bind(this,'Contact')}><i className="fas fa-phone"></i>{this.state.width < 768?" Contact":null}</span>
           </li>
         </ul>
       </div>

@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import './assets/resume.css';
-import Header from './Pages/Header/Header';
-import About from './Pages/About/About'
-import Experience from './Pages/Experience/Experience'
-// import Interests from './Pages/Interests/Interests'
-import Projects from './Pages/Projects/Projects'
-import Awards from './Pages/Awards/Awards'
-// import PageShell from './Pages/About/pageShell'
-import Contact from './Pages/Contact/Contact'
-import Me from './Pages/Me/Me'
+import Header from './pages/Header/Header';
+import About from './pages/About/About'
+import Experience from './pages/Experience/Experience'
+// import Interests from './pages/Interests/Interests'
+import Projects from './pages/Projects/Projects'
+import Awards from './pages/Awards/Awards'
+// import PageShell from './pages/About/pageShell'
+import Contact from './pages/Contact/Contact'
+import Me from './pages/Me/Me'
 import { withRouter } from 'react-router-dom';
 import {ScrollContext} from './context/context'
+import './index.css'
+import './App.css'
 // import { Route } from "react-router-dom";
 class App extends Component {
   
@@ -24,22 +25,29 @@ class App extends Component {
     }
   }
   updateUrl() {
+    if(window){
    this.setState({url:window.location.pathname})
-    
+  }
   }
   componentDidMount(){
     this.updateUrl()
+    if(window){
     window.addEventListener('scroll', this.handleScroll);
+  }
   }
     componentDidUpdate(prevProps) {
       if (this.props.location !== prevProps.location) {
         this.updateUrl();
       }
+      if(window){
       window.addEventListener('scroll', this.handleScroll);
+    }
     }
 
     handleScroll = () => {
+      if(window){
       this.setState({scroll:window.scrollY})
+    }
   }
   scrollPos(type){
     var element = "";
@@ -139,5 +147,4 @@ class App extends Component {
     );
   }
 }
-
 export default withRouter(App);

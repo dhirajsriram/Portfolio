@@ -9,7 +9,7 @@ class About extends Component {
     ml4.durationIn = 800;
     ml4.durationOut = 600;
     ml4.delay = 500;
-
+    if(typeof(window) !== 'undefined' && window.anime){
     window.anime
       .timeline({ loop: true })
       .add({
@@ -59,7 +59,7 @@ class About extends Component {
         opacity: 0,
         duration: 500,
         delay: 500
-      });
+      });}
   }
   render() {
     return (

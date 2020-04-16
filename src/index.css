@@ -433,8 +433,6 @@ div.resume-section.about {
 div.resume-section.about::before {
   background-image: none; }
 
-.bg-primary {
-  background-color: #bd5d38 !important; }
 
 .text-primary {
   color: #29f3c3 !important; }
