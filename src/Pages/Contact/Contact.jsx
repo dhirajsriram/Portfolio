@@ -8,7 +8,6 @@ class Contact extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit(event) {
-    console.log(this.state)
     var maiLink1 = "mailto:dhirajsriram3194@gmail.com?subject=" + this.state.subject +"- "+this.state.name +" " + this.state.surname +  " ( "+ this.state.Phone + " ) &body="+this.state.message;
     var mailLink2 = "mailto:dhirajsriram3194@gmail.com?subject=" + this.state.subject +"- "+this.state.name +" " + this.state.surname +"&body="+this.state.message;
     if(this.state.Phone){

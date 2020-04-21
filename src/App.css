@@ -19,6 +19,10 @@ a.nav-link.js-scroll-trigger:hover {
     padding-top: 0;
     padding-left: 6rem; } }
 
+#sideNav {
+  z-index: 1;
+}
+
 h1,
 h2,
 h3,
