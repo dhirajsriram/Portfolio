@@ -79,8 +79,14 @@
   .ml4 {
     text-align: center;
     position: relative;
-    font-weight: 900;
+    font-weight: normal;
     font-size: 3rem;
+    @media (max-width: 992px) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: 400px) {
+      font-size: 2rem;
+    }
     .letters {
       position: absolute;
       margin: auto;
