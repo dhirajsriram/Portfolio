@@ -1,7 +1,8 @@
 import App from "./App";
 import React from "react";
-import { StaticRouter } from "react-router-dom";
 import express from "express";
+
+import { StaticRouter } from "react-router-dom";
 import { renderToString } from "react-dom/server";
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
@@ -59,9 +60,6 @@ server
         <!-- Bootstrap core CSS -->
       
         <!-- Custom fonts for this template -->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" defer>
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" defer>
-      
         <!-- Custom styles for this template -->
         <link href="/css/resume.min.css" rel="stylesheet">
         ${

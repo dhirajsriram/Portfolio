@@ -1,0 +1,30 @@
+@mixin loaderAnim($animation-name) {
+  @keyframes #{$animation-name} {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin fade($animation-name, $in) {
+  @keyframes #{$animation-name} {
+    @if $in {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    } @else {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}

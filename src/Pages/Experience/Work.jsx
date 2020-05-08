@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './Work.scss';
 
 class Work extends Component {
   constructor(props) {

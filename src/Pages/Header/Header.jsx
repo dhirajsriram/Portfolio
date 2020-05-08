@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ScrollContext } from "../../context/context";
+import './Header.scss';
 class Header extends Component {
   constructor() {
     super();

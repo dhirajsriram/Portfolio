@@ -1,0 +1,61 @@
+@import '../../scss/main.scss';
+
+#sideNav {
+  z-index: 1;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 17rem;
+  height: 100vh;
+  .navbar-collapse {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: auto;
+    .navbar-nav {
+      flex-direction: column;
+      width: 100%;
+      .nav-item {
+        display: block;
+        .nav-link {
+          display: block;
+        }
+      }
+    }
+  }
+  .navbar-brand {
+    display: flex;
+    margin: auto auto 0;
+    padding: 0.5rem;
+    .img-profile {
+      max-width: 10rem;
+      max-height: 10rem;
+    }
+  }
+}
+.navbar-brand {
+  padding: 3px;
+  border: 2px solid $cyan;
+  .navbar-collapse {
+    margin-top: 13px;
+  }
+}
+.navbar-nav {
+  .nav-item {
+    padding: 5px 0px;
+    .main-links {
+      i {
+        margin-right: 5px;
+      }
+    }
+    .nav-link {
+      font-weight: 800;
+      letter-spacing: 0.05rem;
+      text-transform: uppercase;
+    }
+  }
+}

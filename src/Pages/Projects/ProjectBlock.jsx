@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ProjectBlock.scss';
 
 class ProjectBlock extends Component {
 

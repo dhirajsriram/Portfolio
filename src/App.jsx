@@ -9,8 +9,8 @@ import Awards from "./pages/Awards/Awards";
 import Contact from "./pages/Contact/Contact";
 import Me from "./pages/Me/Me";
 import { ScrollContext } from "./context/context";
-import "./index.css";
-import "./App.css";
+import "./index.scss";
+import "./App.scss";
 // import { Route } from "react-router-dom";
 class App extends Component {
   constructor() {

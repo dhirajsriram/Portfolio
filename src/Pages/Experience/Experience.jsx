@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Work from "./Work";
+import './Experience.scss';
 
 class Experience extends Component {
   render() {

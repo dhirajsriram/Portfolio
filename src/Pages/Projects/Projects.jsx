@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ProjectBlock from "./ProjectBlock";
+import './Projects.scss';
 
 class Projects extends Component {
   constructor(props) {

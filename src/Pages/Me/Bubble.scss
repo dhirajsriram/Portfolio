@@ -1,0 +1,23 @@
+@import '../../scss/main.scss';
+
+.skill {
+  .bubble-header {
+    font-size: 1.5em !important;
+  }
+  .circle {
+    background-color: #262626;
+    border-radius: 50%;
+    height: 175px;
+    width: 175px;
+    color: white;
+    word-wrap: break-word;
+    margin: 10px auto;
+    padding: 45px;
+    i {
+      font-size: 75px;
+    }
+    &:hover {
+      background: $cyan;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@import "./../../scss/main.scss";
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.about {
+  background: #3c3c3c;
+  min-height: 100vh;
+  overflow-x: hidden;
+  &::before {
+    background-image: none;
+  }
+  #myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.5;
+  }
+  p.lead {
+    font-size: 1.15rem;
+    font-weight: 400;
+  }
+  .fadeMe {
+    animation: fadeIn 0.25s linear;
+    &.none {
+      opacity: 0;
+      animation: fadeOut 0.25s linear;
+    }
+  }
+
+  .links {
+    color: $cyan !important;
+    font-size: 15px;
+    &.contact {
+      position: fixed;
+      bottom: 0px;
+      left: 25%;
+      height: 100px;
+      width: 54%;
+      background: transparent;
+      border: 0px;
+    }
+    &.portfolio {
+      position: fixed;
+      right: 0px;
+      position: fixed;
+      top: 25%;
+      width: 100px;
+      height: 50%;
+      background: transparent;
+      border: 0px;
+      button {
+        position: absolute;
+        top: 50%;
+      }
+      @media (max-width: 768px) {
+        width: 70px;
+      }
+    }
+  }
+
+  .ml4 {
+    text-align: center;
+    position: relative;
+    font-weight: 900;
+    font-size: 3rem;
+    .letters {
+      position: absolute;
+      margin: auto;
+      left: 0;
+      top: 0.3em;
+      right: 0;
+      opacity: 0;
+    }
+  }
+}

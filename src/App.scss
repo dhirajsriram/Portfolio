@@ -1,0 +1,61 @@
+section.resume-section {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  max-width: 75rem;
+  background: black;
+  @media (min-width: 768px) {
+    min-height: 100vh;
+  }
+  @media (min-width: 992px) {
+    padding-top: 10rem !important;
+    padding-bottom: 10rem !important;
+  }
+  .heading-padd {
+    margin-bottom: 50px !important;
+  }
+  .jumbotron {
+    background: transparent;
+  }
+  .page {
+    overflow: hidden;
+  }
+  .resume-item {
+    .resume-date {
+      min-width: none;
+      @media (min-width: 768px) {
+        min-width: 18rem;
+      }
+    }
+  }
+  .bg-primary {
+    background-color: #262626 !important;
+  }
+}
+.bg-black {
+  background: #3c3c3c;
+}
+.background-image {
+  .no-background::before {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  &::before {
+    content: "";
+    background-image: url("assets/images.jpg");
+    background-size: cover;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+.content {
+  position: relative;
+  background: transparent;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}

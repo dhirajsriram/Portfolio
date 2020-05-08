@@ -1,0 +1,32 @@
+$shadow: #008666;
+$scrollbarBG: #3c3c3c;
+$thumbBG: #29f3c3;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  .main-container {
+    padding: 16px;
+  }
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #29f3c3 !important;
+  width: 100px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $scrollbarBG;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $thumbBG;
+  box-shadow: 0 -100vh 0 100vh $shadow, 0 0 15px 5px black;
+}

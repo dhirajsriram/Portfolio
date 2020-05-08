@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import Bubble from "./Bubble";
-import ProgressBar from './ProgressBar'
+import ProgressBar from './ProgressBar';
+import './Me.scss';
 class Me extends Component {
   render() {
     return (
       <div
-        className="resume-section  p-3 d-flex flex-column transition-item"
-        id="me"
+        className="resume-section  p-3 d-flex flex-column transition-item me"
       >
       <h2 id="meh2" className="heading-padd"> </h2>
         <h1 className="subheading text-white text-center Hi" >

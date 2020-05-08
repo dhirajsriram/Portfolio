@@ -1,0 +1,25 @@
+@import '../../scss/main.scss';
+
+#contact .container-fluid {
+  padding: 0px 20%;
+  .controls {
+    label {
+      color: white;
+      font-size: 18px;
+    }
+    .form-control {
+      background: #262626 !important;
+      border: none;
+      color: white;
+    }
+    .btn-contact-submit {
+      background: #262626;
+      color: $cyan;
+      border: 2px solid $cyan;
+      &:hover {
+        background: $cyan;
+        color: #262626;
+      }
+    }
+  }
+}

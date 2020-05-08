@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import {ScrollContext} from '../../context/context'
+import {ScrollContext} from '../../context/context';
+import './About.scss';
 class About extends Component {
   componentDidMount() {
     var ml4 = {};
