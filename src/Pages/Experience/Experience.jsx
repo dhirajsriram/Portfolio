@@ -15,7 +15,7 @@ class Experience extends Component {
         </div>
         <Work
           name={"Saucelabs"}
-          image={require("../../assets/logo-saucelabs.png")}
+          image={require("../../assets/saucelabs-logo.png")}
           devrole="Senior Frontend Engineer"
           duties={[
             "Worked with Design and Product teams to develop features that offers <span class='bold-text'>Enhancements, Sustainability, Accessibility</span> to the  platform.",
@@ -37,7 +37,7 @@ class Experience extends Component {
         />
         <Work
           name={"TAISTech"}
-          image={require("../../assets/taistech-logo-white.png")}
+          image={require("../../assets/taistech-logo.png")}
           devrole="UI developer"
           duties={[
             "Involved in designing HTML's and providing functionality to the web pages based on the requirements",
@@ -59,7 +59,7 @@ class Experience extends Component {
         />
         <Work
           name={"PICKBoxx"}
-          image={require("../../assets/logo-pickBoxx.svg")}
+          image={require("../../assets/pickboxx-logo.svg")}
           devrole="Full Stack Dev"
           duties={[
             "Designed and Translated wireframes/PSDs into launch-ready, valid HTML/CSS of websites twghomeremodeling.com, twgcompanies.com, pickboxx.com",

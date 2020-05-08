@@ -27,7 +27,7 @@ class ProjectBlock extends Component {
           onMouseLeave={this.handleMouseHover}>
               {!this.state.hover ? <div className="image-project">
                 <img
-                  src={this.props.name!=="SOLR XM"?this.props.image:require("../../assets/Solr.png")}
+                  src={this.props.name!=="SOLR XM"?this.props.image:require("../../assets/Solr-logo.png")}
                   alt="Bm-logo"
                   height={this.props.name !=="React docs - Tamil"?40:60}
                   className="img-responsive"

@@ -28,43 +28,43 @@ class Projects extends Component {
         <ProjectBlock
             name={"Saucelabs"}
             class={"first"}
-            image={require("../../assets/logo-saucelabs.png")}
+            image={require("../../assets/saucelabs-logo.png")}
             siteurl={"https://www.saucelabs.com"}
             background={require("../../assets/white-bg.png")}
             description={"Live, automated and continuous testing for web & mobile apps on the world's largest cloud-based test platform"}
           />  
           <ProjectBlock
             name={"Brandsmart"}
-            image={require("../../assets/bm_logo.png")}
+            image={require("../../assets/brandsmart-logo.png")}
             siteurl={"https://www.brandsmartusa.com"}
-            background={require("../../assets/electronics.jpg")}
+            background={require("../../assets/electronics-bg.jpg")}
             description={"Electronic retailer chain delivering the best brands at low prices"}
           />
           <ProjectBlock
             name={"DXL"}
             image={"https://www.destinationxl.com/assets/images/dxl-logo.svg"}
             siteurl={"https://www.destinationxl.com"}
-            background={require("../../assets/clothes.jpg")}
+            background={require("../../assets/clothes-bg.jpg")}
             description={"Mens apparel for Big and tall with best in class clothing from the best brands"}
           />
            <ProjectBlock
             name={"SOLR XM"}
             siteurl={"http://172.16.10.179:6080/"}
-            background={require("../../assets/search.jpg")}
+            background={require("../../assets/search-bg.jpg")}
             description={"A Solr based application capable of generating dynamic result pages based on search"}
           />
           <ProjectBlock 
             name={"TWG Companies"}
-            image={require("../../assets/logo-pickboxx.png")}
+            image={require("../../assets/pickboxx-logo.svg")}
             siteurl={"http://twgcompanies.com"}
-            background={require("../../assets/business.jpg")}
+            background={require("../../assets/business-bg.jpg")}
             description={"A business support firm that offers services like Social Media marketing, Business loans etc"}
           />
           <ProjectBlock 
             name={"TWG Homeremodeling"}
-            image={require("../../assets/cropped-TWGHR.png")}
+            image={require("../../assets/twg-logo.png")}
             siteurl={"http://twghomeremodeling.com"}
-            background={require("../../assets/remodeling.jpg")}
+            background={require("../../assets/remodeling-bg.jpg")}
             description={"A home remodeling firm which provides services like Powerwashing, Gutter Cleaning etc"}
           />
         </div>
@@ -73,7 +73,7 @@ class Projects extends Component {
         <div className="row mt-5">
         <ProjectBlock 
             name={"react-accessible-searchbar"}
-            image={require("../../assets/Snow-PNG-Transparent-Image.png")}
+            image={require("../../assets/Snow-bg.png")}
             siteurl={"https://www.npmjs.com/package/react-accessible-searchbar"}
             technologies={["react"]}
             class={"second-line"}
@@ -95,7 +95,7 @@ class Projects extends Component {
             siteurl={"https://pokedex-info.netlify.com/"}
             technologies={["js-square", "react","node", "html5", "css3"]}
             class={"second-line"}
-            background={require("../../assets/117597_pokeball-wallpaper.jpg") }
+            background={require("../../assets/pokeball-bg.jpg") }
             description={"An application that delivers the catalogued information regarding the various species of Pokémon"}
           />
         </div>

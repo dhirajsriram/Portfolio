@@ -58,7 +58,7 @@ class Me extends Component {
               <img
                 className="img-responsive"
                 alt="dhiraj-logo"
-                src={require("../../assets/18700231_1523853040979325_4856863242513125567_n.jpg")}
+                src={require("../../assets/me.jpg")}
               />
               <br />
               <div className="who-is">

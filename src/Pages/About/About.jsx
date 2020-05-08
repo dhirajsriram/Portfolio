@@ -68,7 +68,7 @@ class About extends Component {
   {
     context =>(<div className="resume-section about p-3 d-flex d-column transition-item" id="about">
     <video autoPlay muted loop id="myVideo">
-      <source src={require("../../assets/LineB&W.mp4")} />
+      <source src={require("../../assets/line-bg.mp4")} />
       Your browser does not support HTML5 video.
     </video>
     <div className="my-auto content">
