@@ -2,6 +2,9 @@
 
 #contact .container-fluid {
   padding: 0px 20%;
+  @media (max-width: 992px) {
+    padding: 0;
+  }
   .controls {
     label {
       color: white;

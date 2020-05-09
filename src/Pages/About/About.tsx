@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { ScrollContext } from '../../context/context';
 import './About.scss';
+import './TextAnimation';
 
 interface AboutInterface {
   scroll: number;
@@ -28,9 +29,9 @@ const About: React.FC<AboutInterface> = (props) => {
         </div>
 
         <p className="lead mb-5 ext-truncat text-center">
-          UI Developer based in Berlin, DE. Highly experienced in developing and
+          <div>UI Developer based in Berlin, DE. </div><div>Highly experienced in developing and
           implementing User Interfaces in <i className="fab fa-angular" /> &{' '}
-          <i className="fab fa-react" />.
+          <i className="fab fa-react" /></div>
         </p>
       </div>
       <a

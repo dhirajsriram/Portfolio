@@ -3,7 +3,7 @@ section.resume-section {
   padding-bottom: 5rem !important;
   max-width: 75rem;
   background: black;
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     min-height: 100vh;
   }
   @media (min-width: 992px) {
@@ -22,7 +22,7 @@ section.resume-section {
   .resume-item {
     .resume-date {
       min-width: none;
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         min-width: 18rem;
       }
     }

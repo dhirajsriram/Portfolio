@@ -9,7 +9,7 @@ const Projects: React.FC = () => {
         <h2 id="skillsh2" className="heading-padd" />
         <h2 className="m-5 Heading skills mt-3">Projects</h2>
       </div>
-      <div className="row mt-5 ">
+      <div className="row mt-5">
         <ProjectBlock
           name={'Saucelabs'}
           Class={'first'}
@@ -53,8 +53,8 @@ const Projects: React.FC = () => {
           description={'A home remodeling firm which provides services like Powerwashing, Gutter Cleaning etc'}
         />
       </div>
-      <h3 className="text-center Heading mx-auto">Some personal stuff</h3>
-      <div className="row mt-5">
+      <h3 className="text-center Heading personal-title mx-auto">Some personal projects</h3>
+      <div className="row">
         <ProjectBlock
           name={'react-accessible-searchbar'}
           image={require('../../assets/Snow-bg.png')}
@@ -83,8 +83,8 @@ const Projects: React.FC = () => {
           description={'An application that delivers the catalogued information regarding the various species of Pokémon'}
         />
       </div>
-      <h3 className="text-center Heading mx-auto">In Progress ...</h3>
-      <div className="row mt-5">
+      <h3 className="text-center personal-title Heading mx-auto">In Progress ...</h3>
+      <div className="row">
         <ProjectBlock
           name={'React docs - Tamil'}
           image={'https://cdn4.iconfinder.com/data/icons/logos-3/426/react_js-512.png'}

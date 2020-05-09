@@ -29,11 +29,7 @@ const App: React.FC = () => {
       setState({ ...state, scroll: window.scrollY });
     }
   };
-  useEffect(() => {
-    if (window) {
-      window.addEventListener('scroll', handleScroll);
-    }
-  });
+  useEffect(() => {if (window) {window.addEventListener('scroll', handleScroll); }}, []);
 
   return (
     <div>

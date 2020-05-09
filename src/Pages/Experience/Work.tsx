@@ -23,7 +23,7 @@ const Work: React.FC<WorkInterface> = (props) => {
             <img alt={props.name} src={props.image} height="50" />
           </div>
           <div className="col-6 float-right">
-            <p className="float-right">{props.devrole}</p>
+            <p className="float-right position">{props.devrole}</p>
           </div>
         </div>
         <br />

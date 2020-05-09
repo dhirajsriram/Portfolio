@@ -1,9 +1,15 @@
 .me {
   .Hi {
     font-size: 35px;
+    @media (max-width: 992px) {
+      font-size: 30px;
+    }
   }
   .about-me {
     padding: 0 10em;
+    @media (max-width: 992px) {
+      padding: 0px;
+    }
   }
   .profile-img {
     img {
@@ -14,6 +20,9 @@
     }
     .About-me {
       padding: 0px 7em;
+      @media (max-width: 992px) {
+        padding: 0
+      }
     }
   }
 }
