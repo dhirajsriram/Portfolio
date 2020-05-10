@@ -5,6 +5,7 @@ import Work from './Work';
 const Experience: React.FC = () => {
   return(<div
     className="resume-section  p-3 d-flex flex-column transition-item"
+    id="experience"
   >
     <div className="my-auto">
     <h2 id="experienceh2" className="heading-padd"/>

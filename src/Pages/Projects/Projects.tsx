@@ -4,7 +4,7 @@ import './Projects.scss';
 
 const Projects: React.FC = () => {
   return (
-    <div className="resume-section  p-3 d-flex flex-column transition-item">
+    <div className="resume-section  p-3 d-flex flex-column transition-item" id="projects">
       <div className="my-auto projects-container">
         <h2 id="skillsh2" className="heading-padd" />
         <h2 className="m-5 Heading skills mt-3">Projects</h2>

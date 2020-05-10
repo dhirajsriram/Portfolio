@@ -2,7 +2,7 @@ import React from 'react';
 
 const Interests: React.FC = () => {
   return (
-    <div className="resume-section  p-3 d-flex flex-column transition-item">
+    <div className="resume-section  p-3 d-flex flex-column transition-item" id="interests">
       <div className="my-auto">
         <h2 id="interestsh2" className="heading-padd" />
         <h2 className="mb-5 Heading mt-3">Interests</h2>

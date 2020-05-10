@@ -5,7 +5,7 @@ import ProgressBar from './ProgressBar';
 
 const Me: React.FC  = () => {
   return (
-    <div className="resume-section  p-3 d-flex flex-column transition-item me">
+    <div className="resume-section  p-3 d-flex flex-column transition-item me" id="me">
       <h2 id="meh2" className="heading-padd" />
       <h1 className="subheading text-white text-center Hi">
         Hi, Im Dhiraj. Nice to meet you

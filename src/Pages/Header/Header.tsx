@@ -14,8 +14,9 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = (props) => {
   const [state, setState] = useState<HeaderState>({
     height: 182,
-    width: 800
+    width: 800,
   });
+  const [scroll, setScroll] = useState<string | null>('about');
   const context = useContext(ScrollContext);
   const updateDimensions = () => {
     if (window) {
@@ -28,7 +29,23 @@ const Header: React.FC<HeaderProps> = (props) => {
       }
     }
   };
-  useEffect(() => { updateDimensions(); }, []);
+
+  useEffect(() => {
+    updateDimensions();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute('id');
+        if (entry.intersectionRatio > 0) {
+          setScroll(id);
+        }
+      });
+    });
+    if (typeof window !== 'undefined') {
+      document.querySelectorAll('.resume-section').forEach((section) => {
+        observer.observe(section);
+      });
+    }
+  },        []);
 
   return (
     <nav
@@ -58,78 +75,70 @@ const Header: React.FC<HeaderProps> = (props) => {
         <ul className="navbar-nav">
           <li className="nav-item">
             <span
-              className={
-                props.scroll >= 0 && props.scroll <= 722
-                  ? 'active main-links'
-                  : 'main-links'
-              }
+              className={`main-links ${scroll === 'about' ? 'active' : ''}`}
               onClick={() => context.scrollPos('About')}
             >
               <i className="fas fa-user" />
-              {state.width < 768 ? ' Home' : null}
+              <span className="menu-text">
+                {state.width < 768 ? ' Home' : null}
+              </span>
             </span>
           </li>
           <li className="nav-item">
             <span
-              className={
-                props.scroll > 723 && props.scroll <= 1999
-                  ? 'active main-links'
-                  : 'main-links'
-              }
+              className={`main-links ${scroll === 'me' ? 'active' : ''}`}
               onClick={() => context.scrollPos('Me')}
             >
               <i className="far fa-address-card" />
-              {state.width < 768 ? ' Me' : null}
+              <span className="menu-text">
+                {state.width < 768 ? ' Me' : null}
+              </span>
             </span>
           </li>
           <li className="nav-item">
             <span
-              className={
-                props.scroll >= 2000 && props.scroll <= 3019
-                  ? 'active main-links'
-                  : 'main-links'
-              }
+              className={`main-links ${
+                scroll === 'experience' ? 'active' : ''
+              }`}
               onClick={() => context.scrollPos('Experience')}
             >
               <i className="fas fa-briefcase" />
-              {state.width < 768 ? ' Experience' : null}
+              <span className="menu-text">
+                {state.width < 768 ? ' Experience' : null}
+              </span>
             </span>
           </li>
           <li className="nav-item">
             <span
-              className={
-                props.scroll >= 3020 && props.scroll <= 4970
-                  ? 'active main-links'
-                  : 'main-links'
-              }
+              className={`main-links ${scroll === 'projects' ? 'active' : ''}`}
               onClick={() => context.scrollPos('Projects')}
             >
               <i className="fas fa-file-code" />
-              {state.width < 768 ? ' Portfolio' : null}
+              <span className="menu-text">
+                {state.width < 768 ? ' Portfolio' : null}
+              </span>
             </span>
           </li>
           <li className="nav-item">
             <span
-              className={
-                props.scroll >= 4971 && props.scroll <= 5439
-                  ? 'active main-links'
-                  : 'main-links'
-              }
+              className={`main-links ${scroll === 'awards' ? 'active' : ''}`}
               onClick={() => context.scrollPos('Awards')}
             >
               <i className="fas fa-trophy" />
-              {state.width < 768 ? ' Awards' : null}
+              <span className="menu-text">
+                {state.width < 768 ? ' Awards' : null}
+              </span>
             </span>
           </li>
           <li className="nav-item">
             <span
-              className={
-                props.scroll >= 5440 ? 'active main-links' : 'main-links'
-              }
+              className={`main-links ${scroll === 'contact' ? 'active' : ''}`}
               onClick={() => context.scrollPos('Contact')}
             >
               <i className="fas fa-phone" />
-              {state.width < 768 ? ' Contact' : null}
+              <span className="menu-text">
+                {state.width < 768 ? ' Contact' : null}
+              </span>
             </span>
           </li>
         </ul>

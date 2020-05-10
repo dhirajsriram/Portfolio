@@ -29,9 +29,11 @@ const About: React.FC<AboutInterface> = (props) => {
         </div>
 
         <p className="lead mb-5 ext-truncat text-center">
-          <div>UI Developer based in Berlin, DE. </div><div>Highly experienced in developing and
-          implementing User Interfaces in <i className="fab fa-angular" /> &{' '}
-          <i className="fab fa-react" /></div>
+          <span className="d-block">UI Developer based in Berlin, DE. </span>
+          <span className="d-block">
+            Highly experienced in developing and implementing User Interfaces in{' '}
+            <i className="fab fa-angular" /> & <i className="fab fa-react" />
+          </span>
         </p>
       </div>
       <a

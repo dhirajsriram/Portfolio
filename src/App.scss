@@ -32,10 +32,6 @@ section.resume-section {
   background: #3c3c3c;
 }
 .background-image {
-  .no-background::before {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
   &::before {
     content: "";
     background-image: url("assets/circle-bg.jpg");
@@ -48,7 +44,12 @@ section.resume-section {
     position: fixed;
     transition: opacity 0.5s ease-in-out;
   }
+  &.no-background::before {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
 }
+
 .content {
   position: relative;
   background: transparent;

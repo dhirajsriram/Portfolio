@@ -3,7 +3,7 @@ import Work from '../Experience/Work';
 
 const Awards = () => {
   return (
-    <div className="resume-section  p-3 d-flex flex-column transition-item">
+    <div className="resume-section  p-3 d-flex flex-column transition-item" id="awards">
       <div className="my-auto">
         <h2 id="awardsh2" className="heading-padd" />
         <h2 className="mb-5 Heading awards mt-3">
