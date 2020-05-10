@@ -32,17 +32,19 @@ const Header: React.FC<HeaderProps> = (props) => {
 
   useEffect(() => {
     updateDimensions();
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const id = entry.target.getAttribute('id');
-        if (entry.intersectionRatio > 0) {
-          setScroll(id);
-        }
-      });
-    });
+    const mainSections = document.querySelectorAll('.resume-section');
     if (typeof window !== 'undefined') {
-      document.querySelectorAll('.resume-section').forEach((section) => {
-        observer.observe(section);
+      window.addEventListener('scroll', (e) => {
+        const fromTop = window.scrollY;
+        mainSections.forEach((section: any) => {
+          console.log(section.offsetTop);
+          if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+          ) {
+            setScroll(section.id);
+          } 
+        });
       });
     }
   },        []);

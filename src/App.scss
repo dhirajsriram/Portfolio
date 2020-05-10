@@ -1,32 +1,5 @@
-section.resume-section {
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
-  max-width: 75rem;
-  background: black;
-  @media (min-width: 992px) {
-    min-height: 100vh;
-  }
-  @media (min-width: 992px) {
-    padding-top: 10rem !important;
-    padding-bottom: 10rem !important;
-  }
-  .heading-padd {
-    margin-bottom: 50px !important;
-  }
-  .jumbotron {
-    background: transparent;
-  }
-  .page {
-    overflow: hidden;
-  }
-  .resume-item {
-    .resume-date {
-      min-width: none;
-      @media (min-width: 992px) {
-        min-width: 18rem;
-      }
-    }
-  }
+.resume-section{
+  min-height: 100vh;
 }
 .bg-black {
   background: #3c3c3c;
