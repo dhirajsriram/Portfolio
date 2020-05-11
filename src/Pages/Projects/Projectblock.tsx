@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ProjectBlock.scss';
 
 interface Projectblock {
-  background: string;
+  background?: string;
   description: string;
   name: string;
   siteurl: string;
