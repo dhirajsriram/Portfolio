@@ -13,6 +13,8 @@ const syncLoadAssets = () => {
 };
 syncLoadAssets();
 
+const manifest = `${process.env.PUBLIC_PATH}/manifest.json`;
+
 const server = express()
   .disable('x-powered-by')
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
@@ -23,7 +25,7 @@ const server = express()
         <App />
       </StaticRouter>
     );
-    res.send(html(assets, markup));
+    res.send(html(assets, markup, manifest));
   });
 
 export default server;
