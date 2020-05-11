@@ -1,7 +1,6 @@
 import React from 'react';
 import { hydrate } from 'react-dom';
-
-const App = React.lazy(() => import('./App'));
+import App from './App';
 
 hydrate(
     <App />,

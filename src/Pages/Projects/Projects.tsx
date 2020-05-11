@@ -1,7 +1,6 @@
 import React from 'react';
+import ProjectBlock from './Projectblock';
 import './Projects.scss';
-
-const ProjectBlock = React.lazy(() => import('./Projectblock'));
 
 const Projects: React.FC = () => {
   return (
