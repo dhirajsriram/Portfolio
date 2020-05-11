@@ -16,7 +16,13 @@ const ml4: ML4 = {
   scaleOut: 3,
 };
 
-if (typeof window !== 'undefined') {
+declare global {
+  interface Window {
+      anime: any;
+  }
+}
+
+if (typeof window !== 'undefined' && window.anime) {
 window.anime
   .timeline({ loop: true })
   .add({
@@ -68,3 +74,5 @@ window.anime
     targets: '.ml4',
   });
 }
+
+export {};

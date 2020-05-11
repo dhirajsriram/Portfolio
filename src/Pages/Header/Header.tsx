@@ -37,7 +37,6 @@ const Header: React.FC<HeaderProps> = (props) => {
       window.addEventListener('scroll', (e) => {
         const fromTop = window.scrollY;
         mainSections.forEach((section: any) => {
-          console.log(section.offsetTop);
           if (
             section.offsetTop <= fromTop &&
             section.offsetTop + section.offsetHeight > fromTop
