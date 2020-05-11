@@ -1,5 +1,4 @@
 import express from 'express';
-import { register } from './registerServiceWorker';
 
 let app = require('./server').default;
 
@@ -26,5 +25,3 @@ export default express()
     }
     console.log(`> Started on port ${port}`);
   });
-
-register();

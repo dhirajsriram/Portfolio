@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
           Class={'first'}
           image={require('../../assets/saucelabs-logo.webp')}
           siteurl={'https://www.saucelabs.com'}
-          background={require('../../assets/white-bg.webp')}
+          background={''}
           description={`Live, automated and continuous testing for web & mobile apps on the world\'s largest cloud-based test platform`}
         />
         <ProjectBlock

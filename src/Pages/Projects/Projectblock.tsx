@@ -26,18 +26,18 @@ const ProjectBlock: React.FC<Projectblock> = (props) => {
           : 'col-md-12 col-12 col-sm-12 col-lg-12 col-xl-4 projectBlock'
       }
     >
-      <div
-        className="projects"
-        onClick={handleMouseHover}
-      >
+      <div className="projects" onClick={handleMouseHover}>
         <div className="background-image-container">
-          <img
-            className="background-image"
-            height="180"
-            src={props.background}
-            alt={props.name + '-bg'}
-            loading="lazy"
-          />
+          {props.background && (
+            <img
+              className="background-image"
+              width="360"
+              height="180"
+              src={props.background}
+              alt={props.name + '-bg'}
+              loading="lazy"
+            />
+          )}
         </div>
         <div className="image-project">
           <img
