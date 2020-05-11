@@ -106,7 +106,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="col-md-6">
                   <div className="form-group">
-                    <label htmlFor="form_phone">Phone</label>
+                    <label htmlFor="form_Phone">Phone</label>
                     <input
                       id="form_Phone"
                       type="number"
