@@ -1,5 +1,5 @@
 export const html = (assets: any, markup: string): string => `<!doctype html>
-<html lang="">
+<html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
@@ -36,7 +36,6 @@ export const html = (assets: any, markup: string): string => `<!doctype html>
   
     <!-- Custom fonts for this template -->
     <!-- Custom styles for this template -->
-    <link href="/css/resume.min.css" rel="stylesheet">
     ${
       assets.client.css
         ? `<link rel="stylesheet" href="${assets.client.css}">`
