@@ -1,7 +1,7 @@
 @import "../../scss/main.scss";
 
 #sideNav {
-  z-index: 1;
+  z-index: 1 !important;
   text-align: center;
   position: fixed;
   top: 0;
