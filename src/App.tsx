@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import About from './pages/About/About';
-import Awards from './pages/Awards/Awards';
-import Contact from './pages/Contact/Contact';
-import Experience from './pages/Experience/Experience';
-import Header from './pages/Header/Header';
-import Me from './pages/Me/Me';
-import Projects from './pages/Projects/Projects';
+import About from './Pages/About/About';
+import Awards from './Pages/Awards/Awards';
+import Contact from './Pages/Contact/Contact';
+import Experience from './Pages/Experience/Experience';
+import Header from './Pages/Header/Header';
+import Me from './Pages/Me/Me';
+import Projects from './Pages/Projects/Projects';
 
 import './App.scss';
 import './index.scss';
