@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
       <div className="row">
         <ProjectBlock
           name={'react-accessible-searchbar'}
-          image={require('../../assets/Snow-bg.webp')}
+          image={require('../../assets/search-logo.webp')}
           siteurl={'https://www.npmjs.com/package/react-accessible-searchbar'}
           technologies={['react']}
           Class={'second-line'}

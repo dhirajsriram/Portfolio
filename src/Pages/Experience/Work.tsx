@@ -20,7 +20,7 @@ const Work: React.FC<WorkInterface> = (props) => {
       <div className="exp-header">
         <div className="row">
           <div className="col-6">
-            <img alt={props.name} src={props.image} height="50" />
+            <img alt={props.name} src={props.image} height="50" loading="lazy"/>
           </div>
           <div className="col-6 float-right">
             <p className="float-right position">{props.devrole}</p>

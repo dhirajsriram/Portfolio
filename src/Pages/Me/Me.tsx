@@ -60,6 +60,7 @@ const Me: React.FC  = () => {
         <div className="col-sm-12 col-lg-6 text-center col-12">
           <div className="mt-5 profile-img">
             <img
+              loading="lazy"
               className="img-responsive"
               alt="dhiraj-logo"
               src={require('../../assets/me.webp')}

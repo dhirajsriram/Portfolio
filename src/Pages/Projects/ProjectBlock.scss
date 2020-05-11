@@ -7,9 +7,17 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 black !important;
   background-blend-mode: lighten;
   margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
   background-size: cover;
+  border-radius: 10px;
+
+  .background-image{
+    width:100%;
+    height: 180px;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.5);
+    mix-blend-mode: overlay;
+    border-radius: 10px;
+  }
   .image-project {
     z-index: 2;
     cursor: pointer;
@@ -17,6 +25,8 @@
     margin: auto;
     height: 180px;
     padding: 66px 0;
+    margin-top:-180px;
+    filter: url();
     left: 7%;
     width: 100%;
     @media (max-width: 992px) {
@@ -25,6 +35,9 @@
     img {
       display: block;
       margin: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
   &:hover {
@@ -40,8 +53,10 @@
     margin: auto;
     text-align: center;
     color: white;
+    background: #262626;
     font-size: 18px;
-    height: 180px;
+    height: 200px;
+    padding: 20px;
     .link-button {
       border-radius: 25px;
       width: 50%;
@@ -120,6 +135,6 @@
     }
   }
   &:hover {
-    background: #262626 !important;
+    background: white;
   }
 }
