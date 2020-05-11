@@ -1,6 +1,7 @@
 import React from 'react';
-import ProjectBlock from './ProjectBlock';
 import './Projects.scss';
+
+const ProjectBlock = React.lazy(() => import('./Projectblock'));
 
 const Projects: React.FC = () => {
   return (
@@ -13,43 +14,43 @@ const Projects: React.FC = () => {
         <ProjectBlock
           name={'Saucelabs'}
           Class={'first'}
-          image={require('../../assets/saucelabs-logo.png')}
+          image={require('../../assets/saucelabs-logo.webp')}
           siteurl={'https://www.saucelabs.com'}
-          background={require('../../assets/white-bg.png')}
+          background={require('../../assets/white-bg.webp')}
           description={`Live, automated and continuous testing for web & mobile apps on the world\'s largest cloud-based test platform`}
         />
         <ProjectBlock
           name={'Brandsmart'}
-          image={require('../../assets/brandsmart-logo.png')}
+          image={require('../../assets/brandsmart-logo.webp')}
           siteurl={'https://www.brandsmartusa.com'}
-          background={require('../../assets/electronics-bg.jpg')}
+          background={require('../../assets/electronics-bg.webp')}
           description={'Electronic retailer chain delivering the best brands at low prices'}
         />
         <ProjectBlock
           name={'DXL'}
           image={'https://www.destinationxl.com/assets/images/dxl-logo.svg'}
           siteurl={'https://www.destinationxl.com'}
-          background={require('../../assets/clothes-bg.jpg')}
+          background={require('../../assets/clothes-bg.webp')}
           description={'Mens apparel for Big and tall with best in class clothing from the best brands'}
         />
         <ProjectBlock
           name={'SOLR XM'}
           siteurl={'http://172.16.10.179:6080/'}
-          background={require('../../assets/search-bg.jpg')}
+          background={require('../../assets/search-bg.webp')}
           description={'A Solr based application capable of generating dynamic result pages based on search'}
         />
         <ProjectBlock
           name={'TWG Companies'}
           image={require('../../assets/pickboxx-logo.svg')}
           siteurl={'http://twgcompanies.com'}
-          background={require('../../assets/business-bg.jpg')}
+          background={require('../../assets/business-bg.webp')}
           description={'A business support firm that offers services like Social Media marketing, Business loans etc'}
         />
         <ProjectBlock
           name={'TWG Homeremodeling'}
-          image={require('../../assets/twg-logo.png')}
+          image={require('../../assets/twg-logo.webp')}
           siteurl={'http://twghomeremodeling.com'}
-          background={require('../../assets/remodeling-bg.jpg')}
+          background={require('../../assets/remodeling-bg.webp')}
           description={'A home remodeling firm which provides services like Powerwashing, Gutter Cleaning etc'}
         />
       </div>
@@ -57,20 +58,20 @@ const Projects: React.FC = () => {
       <div className="row">
         <ProjectBlock
           name={'react-accessible-searchbar'}
-          image={require('../../assets/Snow-bg.png')}
+          image={require('../../assets/Snow-bg.webp')}
           siteurl={'https://www.npmjs.com/package/react-accessible-searchbar'}
           technologies={['react']}
           Class={'second-line'}
-          background={'https://i2.wp.com/www.sodawebmedia.com/wp-content/uploads/2016/10/search-box.png?fit=690%2C300&ssl=1'}
+          background={require('../../assets/search-bar-bg.webp')}
           description={'A prebuilt react searchbar with Accessibility ,Autosuggest and Callbacks for search submission and value change'}
         />
         <ProjectBlock
           name={'npm-tabs'}
-          image={'https://raw.githubusercontent.com/samueleaton/design/master/npm-scripts-black.png'}
+          image={require('../../assets/npm-logo.webp')}
           siteurl={'https://www.npmjs.com/package/npm-tabs'}
           technologies={['terminal']}
           Class={'second-line'}
-          background={'https://images.reference.com/reference-production-images/question/aq/tab-key_b59603b8e66566ed.jpg?width=760&height=411&fit=crop'}
+          background={require('../../assets/keys-bg.webp')}
           description={'A bash script that provides autocomplete functionality to your command-line for npm scripts'}
         />
         <ProjectBlock
@@ -79,7 +80,7 @@ const Projects: React.FC = () => {
           siteurl={'https://pokedex-info.netlify.com/'}
           technologies={['js-square', 'react', 'node', 'html5', 'css3']}
           Class={'second-line'}
-          background={require('../../assets/pokeball-bg.jpg')}
+          background={require('../../assets/pokeball-bg.webp')}
           description={'An application that delivers the catalogued information regarding the various species of Pokémon'}
         />
       </div>
@@ -87,11 +88,11 @@ const Projects: React.FC = () => {
       <div className="row">
         <ProjectBlock
           name={'React docs - Tamil'}
-          image={'https://cdn4.iconfinder.com/data/icons/logos-3/426/react_js-512.png'}
+          image={require('../../assets/react-logo.webp')}
           siteurl={'https://github.com/reactjs/ta.reactjs.org/'}
           technologies={['react', 'node', 'html5', 'css3']}
           Class={'second-line'}
-          background={'https://cdn.britannica.com/25/146925-004-784D6F30.jpg'}
+          background={require('../../assets/react-bg.webp')}
           description={'Translation of React docs in Tamil. Working on List and keys segment of the website'}
         />
       </div>

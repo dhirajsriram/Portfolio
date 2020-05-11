@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import About from './pages/About/About';
+
+const About = React.lazy(() => import('./pages/About/About'));
 import Awards from './pages/Awards/Awards';
 import Contact from './pages/Contact/Contact';
 import Experience from './pages/Experience/Experience';

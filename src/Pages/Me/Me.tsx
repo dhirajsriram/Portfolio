@@ -62,7 +62,7 @@ const Me: React.FC  = () => {
             <img
               className="img-responsive"
               alt="dhiraj-logo"
-              src={require('../../assets/me.jpg')}
+              src={require('../../assets/me.webp')}
             />
             <div className="who-is">
               <h3 className="subHeading text-white bubble-header">

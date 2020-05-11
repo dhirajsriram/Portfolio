@@ -36,7 +36,7 @@
   p.lead {
     font-size: 1.15rem;
     font-weight: 400;
-    margin-top: 100px;
+    margin-top: 150px;
   }
   .fadeMe {
     animation: fadeIn 0.25s linear;
@@ -93,9 +93,6 @@
     font-size: 3rem;
     @media (max-width: 992px) {
       font-size: 2.5rem;
-    }
-    @media (max-width: 992px) {
-      font-size: 2rem;
     }
     .letters {
       position: absolute;

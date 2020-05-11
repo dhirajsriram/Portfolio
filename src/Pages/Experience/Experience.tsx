@@ -12,7 +12,7 @@ const Experience: React.FC = () => {
     </div>
     <Work
       name={'Saucelabs'}
-      image={require('../../assets/saucelabs-logo.png')}
+      image={require('../../assets/saucelabs-logo.webp')}
       devrole="Senior Frontend Engineer"
       duties={[
         'Worked with Design and Product teams to develop features that offers <span class=`bold-text`>Enhancements, Sustainability, Accessibility</span> to the  platform.',
@@ -34,7 +34,7 @@ const Experience: React.FC = () => {
     />
     <Work
       name={'TAISTech'}
-      image={require('../../assets/taistech-logo.png')}
+      image={require('../../assets/taistech-logo.webp')}
       devrole="UI developer"
       duties={[
         `Involved in designing HTML's and providing functionality to the web pages based on the requirements`,

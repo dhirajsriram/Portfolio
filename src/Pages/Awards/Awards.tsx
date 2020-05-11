@@ -11,7 +11,7 @@ const Awards = () => {
         </h2>
         <Work
           name={'Oracle CX Hackathon'}
-          image={require('../../assets/Oracle-logo.png')}
+          image={require('../../assets/Oracle-logo.webp')}
           devrole={'Dressing Room 2.0'}
           duties={[
             'Designed an application which <span class=\'bold-text\'>improves the dressing room experiece</span> of the customer',

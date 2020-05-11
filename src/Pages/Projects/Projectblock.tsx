@@ -41,7 +41,7 @@ const ProjectBlock: React.FC<Projectblock> = (props) => {
               src={
                 props.name !== 'SOLR XM'
                   ? props.image
-                  : require('../../assets/Solr-logo.png')
+                  : require('../../assets/Solr-logo.webp')
               }
               alt="brandsmart-logo"
               height={props.name !== 'React docs - Tamil' ? 40 : 60}
