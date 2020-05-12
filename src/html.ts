@@ -1,4 +1,4 @@
-export const html = (assets: any, markup: string): string => `<!doctype html>
+export const html = (assets: any, markup: string): string => `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
