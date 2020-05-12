@@ -1,5 +1,4 @@
 import express from 'express';
-import * as process from 'process';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
