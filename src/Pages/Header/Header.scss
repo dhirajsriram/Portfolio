@@ -28,6 +28,10 @@
     background-color: $primary-color !important;
   }
   .navbar-mobile-menu {
+    display: none;
+    @media (max-width: 992px) {
+      display: block;
+    }
     border: none;
     background: transparent !important;
     .icon-bar {
