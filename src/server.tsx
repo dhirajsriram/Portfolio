@@ -3,18 +3,20 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import App from './App';
+import * as heroku from 'process';
 import { html } from './html';
 
+console.log(heroku.env.RAZZLE_PUBLIC_DIR);
 let assets: any;
+let publicPath:string = heroku.env.RAZZLE_PUBLIC_DIR || process.env.RAZZLE_PUBLIC_DIR!
 
 const syncLoadAssets = () => {
   assets = require(process.env.RAZZLE_ASSETS_MANIFEST!);
 };
 syncLoadAssets();
-console.log(process.env.RAZZLE_PUBLIC_DIR);
 const server = express()
   .disable('x-powered-by')
-  .use(express.static('/app/build/public'))
+  .use(express.static(publicPath))
   .get('/*', (req: express.Request, res: express.Response) => {
     const context = {};
     const markup = renderToString(
