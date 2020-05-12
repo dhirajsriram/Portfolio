@@ -1,5 +1,14 @@
 @import "../../scss/main.scss";
 
+@keyframes expand{
+  from{
+    height: 0px;
+  }
+  to{
+    height: 200px;
+  }
+}
+
 .projects {
   transition: background-color 0.5s ease;
   position: relative;
@@ -58,8 +67,8 @@
     color: white;
     background: #262626;
     font-size: 18px;
-    height: 200px;
     padding: 20px;
+    animation: expand 0.1s linear;
     .link-button {
       border-radius: 25px;
       width: 50%;

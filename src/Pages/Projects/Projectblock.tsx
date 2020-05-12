@@ -12,9 +12,9 @@ interface Projectblock {
 }
 
 const ProjectBlock: React.FC<Projectblock> = (props) => {
-  const [hover, setHover] = useState<boolean>(false);
-  const handleMouseHover = (): void => {
-    setHover(!hover);
+  const [selected, setselected] = useState<boolean>(false);
+  const handleMouseselected = (): void => {
+    setselected(!selected);
   };
   return (
     <div
@@ -26,7 +26,7 @@ const ProjectBlock: React.FC<Projectblock> = (props) => {
           : 'col-md-12 col-12 col-sm-12 col-lg-12 col-xl-4 projectBlock'
       }
     >
-      <div className="projects" onClick={handleMouseHover}>
+      <div className="projects" onClick={handleMouseselected}>
         <div className="background-image-container">
           {props.background && (
             <img
@@ -52,8 +52,8 @@ const ProjectBlock: React.FC<Projectblock> = (props) => {
             className="img-responsive"
           />
         </div>
-        {hover && (
-          <div className="project-backside">
+        {selected && (
+          <div className="project-backside" id={props.name}>
             <div className="project-desc">{props.description}</div>
             <div className="link-button">
               <a href={props.siteurl}>View Website</a>
