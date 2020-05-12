@@ -1,9 +1,9 @@
 import express from 'express';
+import * as process from 'process';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import App from './App';
-import * as process from 'process';
 import { html } from './html';
 
 let assets: any;
