@@ -3,12 +3,12 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import App from './App';
+import * as process from 'process';
 import { html } from './html';
 
 let assets: any;
 
 const syncLoadAssets = () => {
-  console.log(process.env.RAZZLE_ASSETS_MANIFEST, process.env.RAZZLE_PUBLIC_DIR);
   assets = require(process.env.RAZZLE_ASSETS_MANIFEST!);
 };
 syncLoadAssets();
