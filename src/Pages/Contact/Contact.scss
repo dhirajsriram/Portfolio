@@ -11,17 +11,17 @@
       font-size: 18px;
     }
     .form-control {
-      background: #262626 !important;
+      background: $primary-color !important;
       border: none;
       color: white;
     }
     .btn-contact-submit {
-      background: #262626;
+      background: $primary-color;
       color: $cyan;
       border: 2px solid $cyan;
       &:hover {
         background: $cyan;
-        color: #262626;
+        color: $primary-color;
       }
     }
   }

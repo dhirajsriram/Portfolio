@@ -16,8 +16,69 @@ const Header: React.FC<HeaderProps> = (props) => {
     height: 182,
     width: 800,
   });
+  const [expand, setExpand] = useState<boolean>(false);
   const [scroll, setScroll] = useState<string | null>('about');
   const context = useContext(ScrollContext);
+
+  const MenuItems = () => (
+    <ul className="navbar-nav" onClick={(e) => e.stopPropagation()}>
+      <li className="nav-item">
+        <span
+          className={`main-links ${scroll === 'about' ? 'active' : ''}`}
+          onClick={() => context.scrollPos('About')}
+        >
+          <i className="fas fa-user" />
+          <span className="menu-text">Home</span>
+        </span>
+      </li>
+      <li className="nav-item">
+        <span
+          className={`main-links ${scroll === 'me' ? 'active' : ''}`}
+          onClick={() => context.scrollPos('Me')}
+        >
+          <i className="far fa-address-card" />
+          <span className="menu-text">Me</span>
+        </span>
+      </li>
+      <li className="nav-item">
+        <span
+          className={`main-links ${scroll === 'experience' ? 'active' : ''}`}
+          onClick={() => context.scrollPos('Experience')}
+        >
+          <i className="fas fa-briefcase" />
+          <span className="menu-text">Experience</span>
+        </span>
+      </li>
+      <li className="nav-item">
+        <span
+          className={`main-links ${scroll === 'projects' ? 'active' : ''}`}
+          onClick={() => context.scrollPos('Projects')}
+        >
+          <i className="fas fa-file-code" />
+          <span className="menu-text">Portfolio</span>
+        </span>
+      </li>
+      <li className="nav-item">
+        <span
+          className={`main-links ${scroll === 'awards' ? 'active' : ''}`}
+          onClick={() => context.scrollPos('Awards')}
+        >
+          <i className="fas fa-trophy" />
+          <span className="menu-text">Awards</span>
+        </span>
+      </li>
+      <li className="nav-item">
+        <span
+          className={`main-links ${scroll === 'contact' ? 'active' : ''}`}
+          onClick={() => context.scrollPos('Contact')}
+        >
+          <i className="fas fa-phone" />
+          <span className="menu-text">Contact</span>
+        </span>
+      </li>
+    </ul>
+  );
+
   const updateDimensions = () => {
     if (window) {
       if (window.innerWidth < 500) {
@@ -30,9 +91,18 @@ const Header: React.FC<HeaderProps> = (props) => {
     }
   };
 
+  const toggleMenu = (e: any) => {
+    e.stopPropagation();
+    setExpand(!expand);
+  };
+
   useEffect(() => {
     updateDimensions();
     const mainSections = document.querySelectorAll('.resume-section');
+    window.addEventListener('click', () => {
+      setExpand(false);
+    });
+
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', (e) => {
         const fromTop = window.scrollY;
@@ -42,7 +112,7 @@ const Header: React.FC<HeaderProps> = (props) => {
             section.offsetTop + section.offsetHeight > fromTop
           ) {
             setScroll(section.id);
-          } 
+          }
         });
       });
     }
@@ -62,87 +132,22 @@ const Header: React.FC<HeaderProps> = (props) => {
         </span>
       </div>
       <button
-        className="navbar-toggler"
+        className={`navbar-mobile-menu${expand ? '' : ' collapsed'}`}
         type="button"
         data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+        onClick={(e) => toggleMenu(e)}
       >
-        <span className="navbar-toggler-icon" />
+        <span className="icon-bar top-bar"/>
+        <span className="icon-bar middle-bar"/>
+        <span className="icon-bar bottom-bar"/>
       </button>
+      {expand && (
+        <div className="mobile-menu">
+          <MenuItems />
+        </div>
+      )}
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <span
-              className={`main-links ${scroll === 'about' ? 'active' : ''}`}
-              onClick={() => context.scrollPos('About')}
-            >
-              <i className="fas fa-user" />
-              <span className="menu-text">
-                {state.width < 768 ? ' Home' : null}
-              </span>
-            </span>
-          </li>
-          <li className="nav-item">
-            <span
-              className={`main-links ${scroll === 'me' ? 'active' : ''}`}
-              onClick={() => context.scrollPos('Me')}
-            >
-              <i className="far fa-address-card" />
-              <span className="menu-text">
-                {state.width < 768 ? ' Me' : null}
-              </span>
-            </span>
-          </li>
-          <li className="nav-item">
-            <span
-              className={`main-links ${
-                scroll === 'experience' ? 'active' : ''
-              }`}
-              onClick={() => context.scrollPos('Experience')}
-            >
-              <i className="fas fa-briefcase" />
-              <span className="menu-text">
-                {state.width < 768 ? ' Experience' : null}
-              </span>
-            </span>
-          </li>
-          <li className="nav-item">
-            <span
-              className={`main-links ${scroll === 'projects' ? 'active' : ''}`}
-              onClick={() => context.scrollPos('Projects')}
-            >
-              <i className="fas fa-file-code" />
-              <span className="menu-text">
-                {state.width < 768 ? ' Portfolio' : null}
-              </span>
-            </span>
-          </li>
-          <li className="nav-item">
-            <span
-              className={`main-links ${scroll === 'awards' ? 'active' : ''}`}
-              onClick={() => context.scrollPos('Awards')}
-            >
-              <i className="fas fa-trophy" />
-              <span className="menu-text">
-                {state.width < 768 ? ' Awards' : null}
-              </span>
-            </span>
-          </li>
-          <li className="nav-item">
-            <span
-              className={`main-links ${scroll === 'contact' ? 'active' : ''}`}
-              onClick={() => context.scrollPos('Contact')}
-            >
-              <i className="fas fa-phone" />
-              <span className="menu-text">
-                {state.width < 768 ? ' Contact' : null}
-              </span>
-            </span>
-          </li>
-        </ul>
+        <MenuItems />
       </div>
     </nav>
   );

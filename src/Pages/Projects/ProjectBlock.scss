@@ -65,7 +65,7 @@
     margin: auto;
     text-align: center;
     color: white;
-    background: #262626;
+    background: $primary-color;
     font-size: 18px;
     padding: 20px;
     animation: expand 0.1s linear;
@@ -95,7 +95,7 @@
   }
   .project-text {
     height: 225px;
-    background: #262626;
+    background: $primary-color;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),

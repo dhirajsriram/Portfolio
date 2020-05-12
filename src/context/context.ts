@@ -21,7 +21,7 @@ export const ScrollContext = React.createContext({
         break;
 
       case 'Experience':
-        element = document.getElementById('experienceh2');
+        element = document.getElementById('experience');
         element?.scrollIntoView({
           behavior: 'smooth',
           block: 'start',

@@ -1,5 +1,14 @@
 @import "../../scss/main.scss";
 
+@keyframes slidein {
+  from {
+    right: -75px;
+  }
+  to {
+    right: 0;
+  }
+}
+
 #sideNav {
   z-index: 1 !important;
   text-align: center;
@@ -16,7 +25,73 @@
     width: unset;
   }
   &.bg-primary {
-    background-color: #262626 !important;
+    background-color: $primary-color !important;
+  }
+  .navbar-mobile-menu {
+    border: none;
+    background: transparent !important;
+    .icon-bar {
+      transition: all 0.2s;
+      border: 1.5px solid $cyan;
+      display: block;
+      width: 22px;
+      height: 2px;
+      border-radius: 1px;
+      margin-top: 3px;
+    }
+    &:hover {
+      background: transparent !important;
+    }
+    .top-bar {
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+    }
+    .middle-bar {
+      opacity: 0;
+    }
+    .bottom-bar {
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+    }
+    &.collapsed {
+      .icon-bar {
+        margin-top:5px;
+      }
+      .top-bar {
+        transform: rotate(0);
+      }
+      .middle-bar {
+        opacity: 1;
+      }
+      .bottom-bar {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    width: 75px;
+    top: 54px;
+    right: 0px;
+    height: 100vh;
+    background: $primary-color;
+    animation: slidein 0.2s linear;
+    @media (max-width: 992px) {
+      display: block;
+    }
+    .nav-item {
+      padding: 20px;
+      .main-links {
+        i {
+          font-size: 25px;
+        }
+      }
+      .menu-text {
+        display: none;
+      }
+    }
   }
   .navbar-collapse {
     display: flex;
@@ -40,9 +115,7 @@
             padding: 20px;
           }
           .menu-text {
-            @media (min-width: 992px) {
-              display: none;
-            }
+            display: none;
           }
           .nav-link {
             font-weight: 800;
