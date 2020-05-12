@@ -14,7 +14,7 @@ syncLoadAssets();
 console.log(process.env.RAZZLE_PUBLIC_DIR);
 const server = express()
   .disable('x-powered-by')
-  .use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
+  .use(express.static('/app/build/public'))
   .get('/*', (req: express.Request, res: express.Response) => {
     const context = {};
     const markup = renderToString(
