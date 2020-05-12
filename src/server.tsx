@@ -6,7 +6,6 @@ import { StaticRouter } from 'react-router-dom';
 import App from './App';
 import { html } from './html';
 
-console.log(heroku.env.RAZZLE_PUBLIC_DIR);
 let assets: any;
 const publicPath: string = heroku.env.RAZZLE_PUBLIC_DIR || process.env.RAZZLE_PUBLIC_DIR!;
 
