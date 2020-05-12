@@ -33,7 +33,6 @@ export const html = (assets: any, markup: string): string => `<!DOCTYPE html>
         ? `<link rel="stylesheet" href="${assets.client.css}">`
         : ''
     }
-    ${console.log(process.env)}
     ${
       process.env.NODE_ENV === 'production'
         ? `<script src="${assets.client.js}" defer></script>`
