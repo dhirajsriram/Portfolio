@@ -16,7 +16,6 @@ if (module.hot) {
 }
 
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3333;
-console.log(process.env, port);
 
 export default express()
   .use((req, res) => app.handle(req, res))
