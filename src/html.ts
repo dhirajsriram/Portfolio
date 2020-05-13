@@ -37,6 +37,7 @@ export const html = (assets: any, markup: string): string => `<!DOCTYPE html>
         : `<script src="${assets.client.js}" defer crossorigin></script>`
     }
 </head>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('loading').style.display = 'none'

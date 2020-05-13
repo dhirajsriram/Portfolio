@@ -44,6 +44,14 @@ export const ScrollContext = React.createContext({
         });
         break;
 
+      case 'Twitter':
+        element = document.getElementById('twitter');
+        element?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+        break;
+
       case 'Contact':
         element = document.getElementById('contact');
         element?.scrollIntoView({

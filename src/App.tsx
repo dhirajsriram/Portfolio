@@ -9,6 +9,7 @@ import Projects from './Pages/Projects/Projects';
 
 import './App.scss';
 import './index.scss';
+import Twitter from './Pages/Twitter/Twitter';
 
 interface AppState {
   height: number;
@@ -46,6 +47,7 @@ const App: React.FC = () => {
         <Experience />
         <Projects />
         <Awards />
+        <Twitter/>
         <Contact />
       </div>
     </div>

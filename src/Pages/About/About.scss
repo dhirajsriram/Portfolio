@@ -19,9 +19,12 @@
 }
 
 .about {
-  background: #3c3c3c;
-  min-height: 100vh;
   overflow-x: hidden;
+  background-color: #3c3c3c;
+  @media (max-width : 992px){
+    min-height: unset !important;
+    height: calc(100vh - 54px);
+  }
   &::before {
     background-image: none;
   }
