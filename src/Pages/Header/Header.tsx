@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ScrollContext } from '../../context/context';
 import './Header.scss';
+import MenuItems from './MenuItems';
 
 interface HeaderState {
   width: number;
@@ -19,65 +20,6 @@ const Header: React.FC<HeaderProps> = (props) => {
   const [expand, setExpand] = useState<boolean>(false);
   const [scroll, setScroll] = useState<string | null>('about');
   const context = useContext(ScrollContext);
-
-  const MenuItems = () => (
-    <ul className="navbar-nav" onClick={(e) => e.stopPropagation()}>
-      <li className="nav-item">
-        <span
-          className={`main-links ${scroll === 'about' ? 'active' : ''}`}
-          onClick={() => context.scrollPos('About')}
-        >
-          <i className="fas fa-user" />
-          <span className="menu-text">Home</span>
-        </span>
-      </li>
-      <li className="nav-item">
-        <span
-          className={`main-links ${scroll === 'me' ? 'active' : ''}`}
-          onClick={() => context.scrollPos('Me')}
-        >
-          <i className="far fa-address-card" />
-          <span className="menu-text">Me</span>
-        </span>
-      </li>
-      <li className="nav-item">
-        <span
-          className={`main-links ${scroll === 'experience' ? 'active' : ''}`}
-          onClick={() => context.scrollPos('Experience')}
-        >
-          <i className="fas fa-briefcase" />
-          <span className="menu-text">Experience</span>
-        </span>
-      </li>
-      <li className="nav-item">
-        <span
-          className={`main-links ${scroll === 'projects' ? 'active' : ''}`}
-          onClick={() => context.scrollPos('Projects')}
-        >
-          <i className="fas fa-file-code" />
-          <span className="menu-text">Portfolio</span>
-        </span>
-      </li>
-      <li className="nav-item">
-        <span
-          className={`main-links ${scroll === 'awards' ? 'active' : ''}`}
-          onClick={() => context.scrollPos('Awards')}
-        >
-          <i className="fas fa-trophy" />
-          <span className="menu-text">Awards</span>
-        </span>
-      </li>
-      <li className="nav-item">
-        <span
-          className={`main-links ${scroll === 'contact' ? 'active' : ''}`}
-          onClick={() => context.scrollPos('Contact')}
-        >
-          <i className="fas fa-phone" />
-          <span className="menu-text">Contact</span>
-        </span>
-      </li>
-    </ul>
-  );
 
   const updateDimensions = () => {
     if (window) {
@@ -107,8 +49,9 @@ const Header: React.FC<HeaderProps> = (props) => {
       window.addEventListener('scroll', (e) => {
         const fromTop = window.scrollY;
         mainSections.forEach((section: any) => {
+          // - 50 to accomodate the padding for the heading
           if (
-            section.offsetTop <= fromTop &&
+            section.offsetTop - 500 <= fromTop &&
             section.offsetTop + section.offsetHeight > fromTop
           ) {
             setScroll(section.id);
@@ -143,12 +86,12 @@ const Header: React.FC<HeaderProps> = (props) => {
       </button>
       {expand && (
         <div className="mobile-menu">
-          <MenuItems />
+          <MenuItems scroll={scroll}/>
           <div className="overlay"/>
         </div>
       )}
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <MenuItems />
+        <MenuItems scroll={scroll}/>
       </div>
     </nav>
   );

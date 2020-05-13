@@ -1,5 +1,11 @@
-.resume-section{
+.resume-section {
   min-height: 100vh;
+  @media (max-width: 992px) {
+    .subheading,
+    .Heading {
+      margin-top: 50px !important;
+    }
+  }
 }
 .bg-black {
   background: #3c3c3c;

@@ -29,7 +29,7 @@ export const ScrollContext = React.createContext({
         break;
 
       case 'Projects':
-        element = document.getElementById('skillsh2');
+        element = document.getElementById('projects');
         element?.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
@@ -37,7 +37,7 @@ export const ScrollContext = React.createContext({
         break;
 
       case 'Awards':
-        element = document.getElementById('awardsh2');
+        element = document.getElementById('awards');
         element?.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
@@ -45,7 +45,7 @@ export const ScrollContext = React.createContext({
         break;
 
       case 'Contact':
-        element = document.getElementById('contacth2');
+        element = document.getElementById('contact');
         element?.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
@@ -53,7 +53,7 @@ export const ScrollContext = React.createContext({
         break;
 
       default:
-        element = document.getElementById('abouth2');
+        element = document.getElementById('about');
         element?.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
