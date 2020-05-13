@@ -47,6 +47,7 @@ const Header: React.FC<HeaderProps> = (props) => {
 
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', (e) => {
+        console.log('here');
         const fromTop = window.scrollY;
         mainSections.forEach((section: any) => {
           // - 50 to accomodate the padding for the heading

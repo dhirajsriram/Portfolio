@@ -38,7 +38,7 @@ const App: React.FC = () => {
       <div
         className={
           state.scroll > 720
-            ? 'background-image bg-black'
+            ? 'background-image bg-black yes-background'
             : 'background-image no-background bg-black'
         }
       >

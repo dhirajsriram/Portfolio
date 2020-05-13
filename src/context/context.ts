@@ -3,8 +3,8 @@ export const ScrollContext = React.createContext({
   scrollPos: (type: string) => {
     let element: HTMLElement | null;
     switch (type) {
+      
       case 'About':
-        element = document.getElementById('about');
         window.scrollTo({
           behavior: 'smooth',
           left: 0,
@@ -61,10 +61,10 @@ export const ScrollContext = React.createContext({
         break;
 
       default:
-        element = document.getElementById('about');
-        element?.scrollIntoView({
+        window.scrollTo({
           behavior: 'smooth',
-          block: 'start',
+          left: 0,
+          top: 0,
         });
         break;
     }

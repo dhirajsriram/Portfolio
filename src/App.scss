@@ -11,14 +11,22 @@
   background: #3c3c3c;
 }
 .background-image {
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: opacity 0.2s ease-in-out;
+  background-attachment: fixed;
+  &.yes-background {
+    opacity: 1;
     background-image: url("assets/circle-bg.webp");
-    background-size: cover;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transition: opacity 0.5s ease-in-out;
-    background-attachment: fixed;
+    transition: opacity 0.2s ease-in-out;
+  }
+  &.no-background {
+    background-image: none;
+    transition: opacity 0.2s ease-in-out;
+  }
 }
 
 .content {
