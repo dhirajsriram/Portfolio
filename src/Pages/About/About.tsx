@@ -16,7 +16,7 @@ const About: React.FC<AboutInterface> = (props) => {
       id="about"
     >
       <video autoPlay={true} muted={true} loop={true} id="myVideo">
-        <source src={require('../../assets/line-bg.webm')} />
+        <source src={require('../../assets/line-bg.mp4')} />
         Your browser does not support HTML5 video.
       </video>
       <div className="my-auto content">
