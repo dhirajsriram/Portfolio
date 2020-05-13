@@ -23,7 +23,7 @@
   background-color: #3c3c3c;
   @media (max-width : 992px){
     min-height: unset !important;
-    height: calc(100vh - 54px);
+    height: 100vh;
   }
   &::before {
     background-image: none;
