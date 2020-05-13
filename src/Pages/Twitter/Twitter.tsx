@@ -16,7 +16,7 @@ const Twitter: React.FC = () => {
           className="twitter-timeline"
           data-dnt="true"
           data-theme="dark"
-          data-height="800"
+          data-height="1200"
           href="https://twitter.com/dhiraj_sriram/likes?ref_src=twsrc%5Etfw"
         >
           Tweets Liked by @dhiraj_sriram
