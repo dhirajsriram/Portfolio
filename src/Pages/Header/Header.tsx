@@ -137,13 +137,14 @@ const Header: React.FC<HeaderProps> = (props) => {
         data-toggle="collapse"
         onClick={(e) => toggleMenu(e)}
       >
-        <span className="icon-bar top-bar"/>
-        <span className="icon-bar middle-bar"/>
-        <span className="icon-bar bottom-bar"/>
+          <span className="icon-bar top-bar" />
+          <span className="icon-bar middle-bar" />
+          <span className="icon-bar bottom-bar" />
       </button>
       {expand && (
         <div className="mobile-menu">
           <MenuItems />
+          <div className="overlay"/>
         </div>
       )}
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
