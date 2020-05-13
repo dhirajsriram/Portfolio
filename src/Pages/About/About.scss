@@ -19,7 +19,7 @@
 }
 
 .about {
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: #3c3c3c;
   @media (max-width : 992px){
     min-height: unset !important;
