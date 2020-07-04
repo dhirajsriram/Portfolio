@@ -11,6 +11,28 @@ const Experience: React.FC = () => {
       <h2 className="mb-5 Heading experience mt-3" >Experience</h2>
     </div>
     <Work
+      name={'Everphone'}
+      image={require('../../assets/everphone-logo.webp')}
+      devrole="Senior Frontend Engineer"
+      duties={[
+        'Worked with Design and Product teams to develop features that offers <span class=`bold-text`>Enhancements, Sustainability, Accessibility</span> to the  platform.',
+        'Was involved in developing reusable packages for the <span class=`bold-text`>Component library</span> which gets used internally across various platforms.',
+        'Improved the quality and coverage of unit tests and E2E test which improved the overall <span class=`bold-text`>quality of the platform.</span>',
+        'Was constantly involved in making technical decisions which would impact the productivity of various development teams.',
+        'Was responsible for reviewing code which needs to adhere to Front-end standards, Efficiency and Reusability.',
+        'Was involved in developing A/B tests to make concious design decisions based on the user response.'
+      ]}
+      duration={'Jan 2020 - Apr 2020 | Berlin, DE'}
+      technologies={[
+        'fab fa-react',
+        'fab fa-node',
+        'fab fa-html5',
+        'fab fa-css3',
+        'fab fa-sass',
+        'fab fa-js-square'
+      ]}
+    />
+    <Work
       name={'Saucelabs'}
       image={require('../../assets/saucelabs-logo.webp')}
       devrole="Senior Frontend Engineer"
