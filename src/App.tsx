@@ -33,9 +33,6 @@ const App: React.FC = () => {
   useEffect(() => {
     if (window) {
       window.addEventListener('scroll', handleScroll);
-      if (window.location.protocol !== 'https:') {
-        window.location.replace(`https:${location.href.substring(location.protocol.length)}`);
-    }
     }
   },        []);
 

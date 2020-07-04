@@ -15,12 +15,8 @@ const Experience: React.FC = () => {
       image={require('../../assets/everphone-logo.webp')}
       devrole="Senior Frontend Engineer"
       duties={[
-        'Worked with Design and Product teams to develop features that offers <span class=`bold-text`>Enhancements, Sustainability, Accessibility</span> to the  platform.',
-        'Was involved in developing reusable packages for the <span class=`bold-text`>Component library</span> which gets used internally across various platforms.',
-        'Improved the quality and coverage of unit tests and E2E test which improved the overall <span class=`bold-text`>quality of the platform.</span>',
-        'Was constantly involved in making technical decisions which would impact the productivity of various development teams.',
-        'Was responsible for reviewing code which needs to adhere to Front-end standards, Efficiency and Reusability.',
-        'Was involved in developing A/B tests to make concious design decisions based on the user response.'
+        'Worked exclusively on the customer portal. <span class=`bold-text`> Added functionality, performance improvements, improved usability.</span>',
+        'Was invvolved in reviewing the CI/CD pipeling (github actions). Adding the neccessary steps'
       ]}
       duration={'Jan 2020 - Apr 2020 | Berlin, DE'}
       technologies={[

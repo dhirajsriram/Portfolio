@@ -16,15 +16,15 @@
   left: 0;
   bottom: 0;
   right: 0;
-  transition: opacity 0.2s ease-in-out;
   background-attachment: fixed;
   &.yes-background {
     opacity: 1;
     background-image: url("assets/circle-bg.webp");
-    transition: opacity 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
   }
   &.no-background {
     background-image: none;
+    background-image: url("assets/transparent-bg.webp");
     transition: opacity 0.2s ease-in-out;
   }
 }
