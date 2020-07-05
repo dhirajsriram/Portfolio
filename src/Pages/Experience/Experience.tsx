@@ -62,7 +62,7 @@ const Experience: React.FC = () => {
       image={require('../../assets/taistech-logo.webp')}
       devrole="UI developer"
       duties={[
-        "Involved in designing HTML's and providing functionality to the web pages based on the requirements",
+        'Involved in designing HTML\'s and providing functionality to the web pages based on the requirements',
         'Responsible for building applications optimized for <span class="bold-text">speed,accessibility and responsiveness</span>',
         'Ensure the technical feasibility of UI/UX designs',
         'Collaborate with other team members and ensuring ceaseless development by helping them out in case of any technical blockades.',
