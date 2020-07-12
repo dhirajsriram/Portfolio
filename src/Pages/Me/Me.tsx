@@ -73,7 +73,7 @@ const Me: React.FC  = () => {
                 I work as a UI developer for{' '}
                 <a className="bold-text" href="https://saucelabs.com/">
                   {' '}
-                  Saucelabs, GmbH
+                  Everphone, GmbH
                 </a>{' '}
                 in Berlin, DE. I am a guy that has a serious passion for
                 designing user-friendly, efficient, reliable and intutive
