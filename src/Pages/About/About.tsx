@@ -25,11 +25,11 @@ const About: React.FC<AboutInterface> = (props) => {
         </h1>
         <div className="ml4 subheading text-white">
           <span className="letters letters-1">UI/UX Developer</span>
-          <span className="letters letters-2">Front end Engineer</span>
+          <span className="letters letters-2">Sr. Front end Engineer</span>
         </div>
 
         <p className="lead mb-5 ext-truncat text-center">
-          <span className="d-block">Sr Frontend Engineer based in Berlin, DE. </span>
+          <span className="d-block">Sr. Frontend Engineer based in Berlin, DE. </span>
           <span className="d-block">
             Highly experienced in developing and implementing User Interfaces in{' '}
             <i className="fab fa-angular" /> & <i className="fab fa-react" />
