@@ -154,12 +154,12 @@ const Contact: React.FC = () => {
                 <div className="col-md-12">
                   <input
                     type="submit"
-                    className="btn btn-success btn-contact-submit"
+                    className="btn btn-success btn-contact-submit pl-3 pr-3 pt-2 pb-2"
                     value="Send message"
                   />
                 </div>
               </div>
-              <div className="row">
+              <div className="row pt-2">
                 <div className="col-md-12">
                   <p className="text-muted">
                     <strong>*</strong> These fields are required.
