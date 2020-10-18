@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import About from './Pages/About/About';
-import Awards from './Pages/Awards/Awards';
-import Contact from './Pages/Contact/Contact';
-import Experience from './Pages/Experience/Experience';
-import Header from './Pages/Header/Header';
-import Me from './Pages/Me/Me';
-import Projects from './Pages/Projects/Projects';
+import About from './Segments/About/About';
+import Awards from './Segments/Awards/Awards';
+import Contact from './Segments/Contact/Contact';
+import Experience from './Segments/Experience/Experience';
+import Header from './Segments/Header/Header';
+import Me from './Segments/Me/Me';
+import Projects from './Segments/Projects/Projects';
 
 import './App.scss';
 import './index.scss';
-import Twitter from './Pages/Twitter/Twitter';
+import Twitter from './Segments/Twitter/Twitter';
+import Technologies from './Segments/Technologies/technologies';
 
 interface AppState {
   height: number;
@@ -48,6 +49,7 @@ const App: React.FC = () => {
       >
         <About scroll={state.scroll} />
         <Me />
+        <Technologies />
         <Experience />
         <Projects />
         <Awards />

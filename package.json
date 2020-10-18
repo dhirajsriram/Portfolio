@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "razzle start",
-    "start": "NODE_ENV=production node build/server.js",
+    "start": "set NODE_ENV=production && node build/server.js",
     "build": "razzle build",
     "test": "razzle test --env=jsdom",
     "heroku-postbuild": "razzle build",

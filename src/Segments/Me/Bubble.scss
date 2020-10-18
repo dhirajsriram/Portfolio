@@ -7,17 +7,26 @@
   .circle {
     background-color: $primary-color;
     border-radius: 50%;
-    height: 175px;
-    width: 175px;
     color: white;
     word-wrap: break-word;
     margin: 10px auto;
     padding: 45px;
+    &:hover {
+      background: $cyan;
+    }
+  }
+  .circle-larger{
+    height: 175px;
+    width: 175px;
     i {
       font-size: 75px;
     }
-    &:hover {
-      background: $cyan;
+  }
+  .circle-smaller{
+    height: 150px;
+    width: 150px;
+    i {
+      font-size: 60px;
     }
   }
 }
