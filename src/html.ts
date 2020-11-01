@@ -13,7 +13,16 @@ export const html = (assets: any, markup: string): string => `<!DOCTYPE html>
   
       gtag('config', 'UA-96554645-2');
     </script>
-  
+      <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("user_wJC4KV1iu3uZphOfPZ3Fw");
+      })();
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Dhiraj Sriram portfolio">

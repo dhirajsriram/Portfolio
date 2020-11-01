@@ -1,87 +1,84 @@
 import React, { useState } from 'react';
-import './Contact.scss';
+import './contact.scss';
 
-const Contact: React.FC = () => {
-  const [state, setState] = useState<any>({});
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    const maiLink1 =
-      'mailto:dhirajsriram3194@gmail.com?subject=' +
-      state.subject +
-      '- ' +
-      state.name +
-      ' ' +
-      state.surname +
-      ' ( ' +
-      state.Phone +
-      ' ) &body=' +
-      state.message;
-    const mailLink2 =
-      'mailto:dhirajsriram3194@gmail.com?subject=' +
-      state.subject +
-      '- ' +
-      state.name +
-      ' ' +
-      state.surname +
-      '&body=' +
-      state.message;
-    state.phone
-      ? (window.location.href = maiLink1)
-      : (window.location.href = mailLink2);
-    event.preventDefault();
-  };
-  const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setState({ [event.target.name]: event.target.value });
-  };
+declare global {
+  interface Window {
+    grecaptcha: any;
+    emailjs: any;
+  }
+}
 
+function Contact() {
+  const myFormRef = React.useRef<any>();
+  const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [recaptchError, setRecaptchError] = useState(false);
+  const submitInfo = (e: HTMLFormElement) => {
+    e.preventDefault();
+    setSending(false);
+    if (window.grecaptcha.getResponse() === '') {
+      setRecaptchError(true);
+    } else {
+      setRecaptchError(false);
+      setSent(false);
+      setSending(true);
+      const serviceId = 'service_uxtmsyi';
+      const templateId = 'template_6b5rynb';
+      window.emailjs.sendForm(serviceId, templateId, e.target).then(
+        () => {
+          setSent(true);
+          setSending(false);
+        },
+        (err: any) => {
+          alert('Send email failed!\r\n Response:\n ' + JSON.stringify(err));
+        }
+      );
+      myFormRef.current?.reset();
+    }
+    window.grecaptcha.reset();
+  };
   return (
-    <div
-      className="resume-section  p-3 d-flex flex-column transition-item"
-      id="contact"
-    >
+    <div className="resume-section  p-3 d-flex flex-column transition-item" id="contact">
       <div className="my-auto">
         <h2 id="contacth2" className="heading-padd" />
         <h2 className="mb-5 Heading mt-3">GET IN TOUCH</h2>
         <div className="container-fluid">
           <form
+            ref={myFormRef}
             id="contact-form"
             name="contact"
             method="post"
-            onSubmit={handleSubmit}
+            onSubmit={(e: any) => submitInfo(e)}
           >
             <div className="messages" />
-
             <div className="controls">
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <div className="form-group">
-                    <label htmlFor="form_name">First Name *</label>
+                    <label htmlFor="form_name">Name *</label>
                     <input
                       id="form_name"
                       type="text"
                       name="name"
-                      onChange={(e) => handleChange(e)}
                       className="form-control"
-                      placeholder="Please enter your firstname *"
+                      placeholder="Name"
                       required={true}
-                      data-error="Firstname is required."
+                      data-error="Name is required."
                     />
                     <div className="help-block with-errors" />
                   </div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <div className="form-group">
-                    <label htmlFor="form_lastname">Last Name *</label>
+                    <label htmlFor="form_Company">Company *</label>
                     <input
-                      id="form_lastname"
+                      id="form_Company"
                       type="text"
-                      name="surname"
-                      onChange={(e) => handleChange(e)}
+                      name="company"
                       className="form-control"
-                      placeholder="Please enter your lastname *"
+                      placeholder="Company "
                       required={true}
-                      data-error="Lastname is required."
+                      data-error="Company is required."
                     />
                     <div className="help-block with-errors" />
                   </div>
@@ -95,9 +92,8 @@ const Contact: React.FC = () => {
                       id="form_email"
                       type="email"
                       name="email"
-                      onChange={(e) => handleChange(e)}
                       className="form-control"
-                      placeholder="Please enter your email *"
+                      placeholder="Email "
                       required={true}
                       data-error="Valid email is required."
                     />
@@ -106,15 +102,8 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="col-md-6">
                   <div className="form-group">
-                    <label htmlFor="form_Phone">Phone</label>
-                    <input
-                      id="form_Phone"
-                      type="number"
-                      name="Phone"
-                      onChange={(e) => handleChange(e)}
-                      className="form-control"
-                      placeholder="Please enter your Phone "
-                    />
+                    <label htmlFor="form_phone">Phone *</label>
+                    <input id="form_phone" type="number" name="phone" className="form-control" placeholder="Phone" />
                     <div className="help-block with-errors" />
                   </div>
                 </div>
@@ -126,9 +115,8 @@ const Contact: React.FC = () => {
                     <input
                       id="form_subject"
                       name="subject"
-                      onChange={(e) => handleChange(e)}
                       className="form-control"
-                      placeholder="Subject*"
+                      placeholder="Subject"
                       required={true}
                       data-error="Please add a subject"
                     />
@@ -141,29 +129,58 @@ const Contact: React.FC = () => {
                     <textarea
                       id="form_message"
                       name="message"
-                      onChange={(e) => handleChange(e)}
                       className="form-control"
-                      placeholder="Message for me *"
+                      placeholder="Message for me "
                       rows={4}
                       required={true}
-                      data-error="Please, leave us a message."
+                      data-error="Please, leave a message."
                     />
                     <div className="help-block with-errors" />
                   </div>
                 </div>
-                <div className="col-md-12">
-                  <input
-                    type="submit"
-                    className="btn btn-success btn-contact-submit pl-3 pr-3 pt-2 pb-2"
-                    value="Send message"
-                  />
-                </div>
-              </div>
-              <div className="row pt-2">
-                <div className="col-md-12">
-                  <p className="text-muted">
-                    <strong>*</strong> These fields are required.
-                  </p>
+                <div
+                  className={recaptchError ? 'g-recaptcha error pl-2' : 'g-recaptcha pl-2 pb-3'}
+                  data-theme="dark"
+                  data-sitekey="6Ld80N0ZAAAAAFJuZ6TkFTNiimx6cJlcMwCtSQnH"
+                />
+                <div className="col-md-12 button-block">
+                  <div>
+                    {!sending ? (
+                      <button type="submit" className="btn btn-success btn-contact-submit p-2 pl-3 pr-3">
+                        Send
+                      </button>
+                    ) : (
+                      <div className="spinner-container">
+                        <div className="spinner-border" />
+                      </div>
+                    )}
+                  </div>
+                  {sent && (
+                    <div className="get-back pt-3">
+                      <i className="fas fa-check-circle" />
+                      Message Sent
+                    </div>
+                  )}
+                  <div className="find-me">
+                    <div>
+                      <a className="icon" href="https://www.linkedin.com/in/dhiraj-sriram/">
+                        <i className="fab fa-linkedin" />
+                      </a>
+                      Linkedin
+                    </div>
+                    <div>
+                      <a className="icon" href="mailto:sriram.ureka@gmail.com">
+                        <i className="fas fa-envelope" />
+                      </a>
+                      dhirajsriram3194@gmail.com
+                    </div>
+                    <div>
+                      <a className="icon" href="tel:+919500034195">
+                        <i className="fas fa-phone" />
+                      </a>
+                      +49 15733-876987
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -172,6 +189,6 @@ const Contact: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Contact;

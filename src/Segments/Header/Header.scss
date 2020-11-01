@@ -47,6 +47,7 @@
     background: transparent !important;
     .icon-bar {
       transition: all 0.2s;
+      background: $cyan;
       border: 1.5px solid $cyan;
       display: block;
       width: 22px;

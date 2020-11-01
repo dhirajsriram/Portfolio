@@ -1,4 +1,4 @@
-@import '../../scss/main.scss';
+@import "../../scss/main.scss";
 
 #contact .container-fluid {
   padding: 0px 20%;
@@ -22,6 +22,29 @@
       &:hover {
         background: $cyan;
         color: $primary-color;
+      }
+      &:disabled {
+        border: 2px solid grey;
+        color: grey;
+      }
+    }
+    .get-back {
+      color: $cyan;
+      i {
+        padding-right: 10px;
+      }
+    }
+    .find-me {
+      display: flex;
+      margin-top: 25px;
+      justify-content: space-between;
+      div {
+        a {
+          i {
+            padding-right: 10px;
+            color: $cyan;
+          }
+        }
       }
     }
   }

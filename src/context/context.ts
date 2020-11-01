@@ -20,6 +20,14 @@ export const ScrollContext = React.createContext({
         });
         break;
 
+      case 'Technologies':
+        element = document.getElementById('technologies');
+        element?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+        break;
+
       case 'Experience':
         element = document.getElementById('experience');
         element?.scrollIntoView({

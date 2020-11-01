@@ -9,8 +9,8 @@ import Projects from './Segments/Projects/Projects';
 
 import './App.scss';
 import './index.scss';
+import Technologies from './Segments/Technologies/Technologies';
 import Twitter from './Segments/Twitter/Twitter';
-import Technologies from './Segments/Technologies/technologies';
 
 interface AppState {
   height: number;
@@ -34,6 +34,9 @@ const App: React.FC = () => {
   useEffect(() => {
     if (window) {
       window.addEventListener('scroll', handleScroll);
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
     }
   },        []);
 
@@ -42,9 +45,7 @@ const App: React.FC = () => {
       <Header scroll={state.scroll} />
       <div
         className={
-          state.scroll > 720
-            ? 'background-image bg-black yes-background'
-            : 'background-image no-background bg-black'
+          state.scroll > 720 ? 'background-image bg-black yes-background' : 'background-image no-background bg-black'
         }
       >
         <About scroll={state.scroll} />

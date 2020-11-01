@@ -29,6 +29,15 @@ const MenuItems: React.FC<MenuItemsState> = (props) => {
       </li>
       <li className="nav-item">
         <span
+          className={`main-links ${props.scroll === 'technologies' ? 'active' : ''}`}
+          onClick={() => context.scrollPos('Technologies')}
+        >
+          <i className="fas fa-laptop-code" />
+          <span className="menu-text">Technologies</span>
+        </span>
+      </li>
+      <li className="nav-item">
+        <span
           className={`main-links ${props.scroll === 'experience' ? 'active' : ''}`}
           onClick={() => context.scrollPos('Experience')}
         >
