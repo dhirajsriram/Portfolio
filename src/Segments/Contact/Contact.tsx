@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import './Contact.scss';
 
 declare global {
@@ -10,13 +11,14 @@ declare global {
 
 function Contact() {
   const myFormRef = React.useRef<any>();
+  const recaptchaRef = React.useRef<any>();
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [recaptchError, setRecaptchError] = useState(false);
   const submitInfo = (e: HTMLFormElement) => {
     e.preventDefault();
     setSending(false);
-    if (window.grecaptcha.getResponse() === '') {
+    if (!recaptchaRef.current.getValue()) {
       setRecaptchError(true);
     } else {
       setRecaptchError(false);
@@ -37,7 +39,7 @@ function Contact() {
         myFormRef.current?.reset();
       }
     }
-    window.grecaptcha.reset();
+    recaptchaRef.current.reset();
   };
   return (
     <div className="resume-section  p-3 d-flex flex-column transition-item" id="contact">
@@ -134,11 +136,14 @@ function Contact() {
                     <div className="help-block with-errors" />
                   </div>
                 </div>
-                <div
+                {/* <div
                   className={recaptchError ? 'g-recaptcha error pl-2' : 'g-recaptcha pl-2 pb-3'}
                   data-theme="dark"
                   data-sitekey="6Ld80N0ZAAAAAFJuZ6TkFTNiimx6cJlcMwCtSQnH"
-                />
+                /> */}
+                <div className="pl-3 pb-3">
+                  <ReCAPTCHA ref={recaptchaRef} sitekey="6Ld80N0ZAAAAAFJuZ6TkFTNiimx6cJlcMwCtSQnH" theme="dark" />
+                </div>
                 <div className="col-md-12 button-block">
                   <div>
                     {!sending ? (

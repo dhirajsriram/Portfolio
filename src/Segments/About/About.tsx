@@ -29,7 +29,7 @@ const About: React.FC<AboutInterface> = (props) => {
         </div>
 
         <p className="lead mb-5 ext-truncat text-center">
-          <span className="d-block">Sr. Frontend Engineer based in Berlin, DE. </span>
+          <span className="d-block pt-5">Sr. Frontend Engineer based in Berlin, DE. </span>
           <span className="d-block">
             Highly experienced in developing and implementing User Interfaces in{' '}
             <i className="fab fa-angular" /> & <i className="fab fa-react" />
