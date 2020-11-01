@@ -5,7 +5,7 @@ export const html = (assets: any, markup: string): string => `<!DOCTYPE html>
     <meta charset="utf-8" />
     <title>Dhiraj Sriram</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96554645-2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96554645-2" async defer></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }

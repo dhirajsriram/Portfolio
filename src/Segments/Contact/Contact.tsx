@@ -24,16 +24,18 @@ function Contact() {
       setSending(true);
       const serviceId = 'service_uxtmsyi';
       const templateId = 'template_6b5rynb';
-      window.emailjs.sendForm(serviceId, templateId, e.target).then(
-        () => {
-          setSent(true);
-          setSending(false);
-        },
-        (err: Error) => {
-          alert(`Unable to submit the form : ${JSON.stringify(err)}`);
-        }
-      );
-      myFormRef.current?.reset();
+      if (window.emailjs) {
+        window.emailjs.sendForm(serviceId, templateId, e.target).then(
+          () => {
+            setSent(true);
+            setSending(false);
+          },
+          (err: Error) => {
+            alert(`Unable to submit the form : ${JSON.stringify(err)}`);
+          }
+        );
+        myFormRef.current?.reset();
+      }
     }
     window.grecaptcha.reset();
   };
