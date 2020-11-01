@@ -29,7 +29,7 @@ function Contact() {
         .then(() => {
           setSent(true);
           setSending(false);
-        })
+        });
       myFormRef.current?.reset();
     }
     window.grecaptcha.reset();
