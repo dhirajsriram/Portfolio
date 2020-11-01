@@ -44,9 +44,15 @@
       div {
         padding-bottom: 8px;
         a {
+          text-decoration: none;
+          color: gray;
+          font-weight: bold;
           i {
             padding-right: 10px;
+          }
+          &:hover{
             color: $cyan;
+            text-decoration: none;
           }
         }
       }

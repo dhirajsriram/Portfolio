@@ -24,15 +24,15 @@ function Contact() {
       setSending(true);
       const serviceId = 'service_uxtmsyi';
       const templateId = 'template_6b5rynb';
-      window.emailjs
-        .sendForm(serviceId, templateId, e.target)
-        .then(() => {
+      window.emailjs.sendForm(serviceId, templateId, e.target).then(
+        () => {
           setSent(true);
           setSending(false);
         },
-              (err: Error) => {
+        (err: Error) => {
           alert(`Unable to submit the form : ${JSON.stringify(err)}`);
-        });
+        }
+      );
       myFormRef.current?.reset();
     }
     window.grecaptcha.reset();
@@ -159,20 +159,20 @@ function Contact() {
                     <div>
                       <a className="icon" href="https://www.linkedin.com/in/dhiraj-sriram/">
                         <i className="fab fa-linkedin" />
+                        Linkedin
                       </a>
-                      Linkedin
                     </div>
                     <div>
                       <a className="icon" href="mailto:sriram.ureka@gmail.com">
                         <i className="fas fa-envelope" />
+                        dhirajsriram3194@gmail.com
                       </a>
-                      dhirajsriram3194@gmail.com
                     </div>
                     <div>
                       <a className="icon" href="tel:+919500034195">
                         <i className="fas fa-phone" />
+                        +49 15733-876987
                       </a>
-                      +49 15733-876987
                     </div>
                   </div>
                 </div>
