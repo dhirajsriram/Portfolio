@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './contact.scss';
+import './Contact.scss';
 
 declare global {
   interface Window {
