@@ -30,9 +30,6 @@ function Contact() {
           setSent(true);
           setSending(false);
         })
-        .catch((error: any) => {
-          alert('Send email failed!\r\n Response:\n ' + JSON.stringify(error));
-        });
       myFormRef.current?.reset();
     }
     window.grecaptcha.reset();
