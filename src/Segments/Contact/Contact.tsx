@@ -29,7 +29,10 @@ function Contact() {
         .then(() => {
           setSent(true);
           setSending(false);
-        });
+        },
+        (err:Error) => {
+          alert(`Unable to submit the form : ${JSON.stringify(err)}`)
+        })
       myFormRef.current?.reset();
     }
     window.grecaptcha.reset();

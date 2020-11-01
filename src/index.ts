@@ -19,10 +19,6 @@ const port = heroku.env.PORT ? parseInt(heroku.env.PORT, 10) : 3333;
 
 export default express()
   .use((req, res) => app.handle(req, res))
-  .listen(port, (err: Error) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
+  .listen(port, () => {
     console.log(`> Started on port ${port}`);
   });
