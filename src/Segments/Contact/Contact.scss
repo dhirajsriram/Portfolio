@@ -35,10 +35,14 @@
       }
     }
     .find-me {
-      display: flex;
+      @media (min-width: 992px) {
+        display: flex;
+      }
       margin-top: 25px;
+      font-size: 13px;
       justify-content: space-between;
       div {
+        padding-bottom: 8px;
         a {
           i {
             padding-right: 10px;
