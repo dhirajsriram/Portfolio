@@ -136,12 +136,7 @@ function Contact() {
                     <div className="help-block with-errors" />
                   </div>
                 </div>
-                {/* <div
-                  className={recaptchError ? 'g-recaptcha error pl-2' : 'g-recaptcha pl-2 pb-3'}
-                  data-theme="dark"
-                  data-sitekey="6Ld80N0ZAAAAAFJuZ6TkFTNiimx6cJlcMwCtSQnH"
-                /> */}
-                <div className="pl-3 pb-3">
+                <div className={recaptchError ? 'g-recaptcha error mb-3 ml-3' : 'g-recaptcha mb-3 ml-3'}>
                   <ReCAPTCHA ref={recaptchaRef} sitekey="6Ld80N0ZAAAAAFJuZ6TkFTNiimx6cJlcMwCtSQnH" theme="dark" />
                 </div>
                 <div className="col-md-12 button-block">

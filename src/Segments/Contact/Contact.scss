@@ -10,6 +10,13 @@
       color: white;
       font-size: 18px;
     }
+    .g-recaptcha {
+      border: none;
+      &.error {
+        border: 2px solid red;
+        border-radius: 5px;
+      }
+    }
     .form-control {
       background: $primary-color !important;
       border: none;
@@ -50,7 +57,7 @@
           i {
             padding-right: 10px;
           }
-          &:hover{
+          &:hover {
             color: $cyan;
             text-decoration: none;
           }

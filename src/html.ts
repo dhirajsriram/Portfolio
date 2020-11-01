@@ -22,7 +22,6 @@ export const html = (assets: any, markup: string): string => `<!DOCTYPE html>
         emailjs.init("user_wJC4KV1iu3uZphOfPZ3Fw");
       })();
     </script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Dhiraj Sriram portfolio">
