@@ -24,15 +24,15 @@ function Contact() {
       setSending(true);
       const serviceId = 'service_uxtmsyi';
       const templateId = 'template_6b5rynb';
-      window.emailjs.sendForm(serviceId, templateId, e.target).then(
-        () => {
+      window.emailjs
+        .sendForm(serviceId, templateId, e.target)
+        .then(() => {
           setSent(true);
           setSending(false);
-        },
-        (err: any) => {
-          alert('Send email failed!\r\n Response:\n ' + JSON.stringify(err));
-        }
-      );
+        })
+        .catch((error: any) => {
+          alert('Send email failed!\r\n Response:\n ' + JSON.stringify(error));
+        });
       myFormRef.current?.reset();
     }
     window.grecaptcha.reset();
@@ -43,13 +43,7 @@ function Contact() {
         <h2 id="contacth2" className="heading-padd" />
         <h2 className="mb-5 Heading mt-3">GET IN TOUCH</h2>
         <div className="container-fluid">
-          <form
-            ref={myFormRef}
-            id="contact-form"
-            name="contact"
-            method="post"
-            onSubmit={(e: any) => submitInfo(e)}
-          >
+          <form ref={myFormRef} id="contact-form" name="contact" method="post" onSubmit={(e: any) => submitInfo(e)}>
             <div className="messages" />
             <div className="controls">
               <div className="row">
